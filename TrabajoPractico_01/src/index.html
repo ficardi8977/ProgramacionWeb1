@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>Unflix</title>
+</head>
+<body>
+    <nav>
+        <ul class="horizontal">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Series</a></li>
+          <li><a href="#">Peliculas</a></li>
+          <li><a href="#">Perfil</a></li>
+        </ul>
+      </nav>
+    <section class= "container">
+       <article>
+        <form class="form-left" action="detallePelicula.html" method="get">
+            <select class="input-text-custom" name="categorias">
+                <option value="Default" selected>-Seleccione una categoria-</option>
+                <option value="Accion" >Accion</option>
+                <option value="Suspenso">Suspenso</option>
+                <option value="Terror">Terror</option>
+              </select>
+            <label for="idBusqueda">buscar:</label>
+            <input class= "input-text-custom" type="search" id="idBusqueda" name="Busqueda">
+            <input class= "button" type="submit">
+          </form>
+       </article> 
+    </section>
+    <section class="contenedor-pelicula">
+        <article class="item-pelicula">1</article>
+        <article class="item-pelicula">2</article>
+        <article class="item-pelicula">3</article>
+        <article class="item-pelicula">4</article>
+        <article class="item-pelicula">5</article>
+        <article class="item-pelicula">6</article>
+        <article class="item-pelicula">7</article>
+        <article class="item-pelicula">8</article>
+        <article class="item-pelicula">9</article>
+        <article class="item-pelicula">10</article>
+        <article class="item-pelicula">11</article>
+        <article class="item-pelicula">12</article>
+    </section>
+</body>
+</html>
