@@ -1,49 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/estilos.css">
-    <title>Unflix</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/main.css">
+  <title>Unflix</title>
 </head>
+
 <body>
-    <nav>
-        <ul class="horizontal">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Series</a></li>
-          <li><a href="#">Peliculas</a></li>
-          <li><a href="#">Perfil</a></li>
-        </ul>
-      </nav>
-    <section class= "container">
-       <article>
-        <form class="form-left" action="detallePelicula.html" method="get">
-            <select class="input-text-custom" name="categorias">
-                <option value="Default" selected>-Seleccione una categoria-</option>
-                <option value="Accion" >Accion</option>
-                <option value="Suspenso">Suspenso</option>
-                <option value="Terror">Terror</option>
-              </select>
-            <label for="idBusqueda">buscar:</label>
-            <input class= "input-text-custom" type="search" id="idBusqueda" name="Busqueda">
-            <input class= "button" type="submit">
-          </form>
-       </article> 
-    </section>
-    <section class="contenedor-pelicula">
-        <article class="item-pelicula">1</article>
-        <article class="item-pelicula">2</article>
-        <article class="item-pelicula">3</article>
-        <article class="item-pelicula">4</article>
-        <article class="item-pelicula">5</article>
-        <article class="item-pelicula">6</article>
-        <article class="item-pelicula">7</article>
-        <article class="item-pelicula">8</article>
-        <article class="item-pelicula">9</article>
-        <article class="item-pelicula">10</article>
-        <article class="item-pelicula">11</article>
-        <article class="item-pelicula">12</article>
-    </section>
+  <nav class="container-nav">
+    <h1 style="width:calc(10%)">UNFLIX</h1>
+    <ul class="horizontal">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#">Series</a></li>
+      <li><a href="#">Peliculas</a></li>
+      <li><a href="#">Perfil</a></li>
+      <li>
+        <form class="form-buscador" action="detallePelicula.html" method="get">
+          <select class="input-text-custom" name="categorias">
+            <option value="Default" selected>-Seleccione una categoria-</option>
+            <option value="Accion">Accion</option>
+            <option value="Suspenso">Suspenso</option>
+            <option value="Terror">Terror</option>
+          </select>
+          <input class="input-text-custom" type="search" placeholder="Buscar" id="idBusqueda" name="Busqueda">
+        </form>
+      </li>
+    </ul>
+  </nav>
+  <section class="seccion-destacadas">
+    <h3>Destacadas de la semana</h3>
+    <article class="contenedor-destacadas">
+      <img class="item-destacada" src="img/destacada.jpg">
+      <img class="item-destacada" src="img/descatada2.jpg">
+    </article>
+  </section>
+  <section class="seccion-peliculas">
+    <h3>Peliculas de acción</h3>
+    <article class="contenedor-pelicula">
+      <img src="img/accion/accion01.jpg" class="item-pelicula">
+      <img src="img/accion/accion02.jpg" class="item-pelicula">
+      <img src="img/accion/accion03.jpg" class="item-pelicula">
+      <img src="img/accion/accion04.jpg" class="item-pelicula">
+      <img src="img/accion/accion05.jpg" class="item-pelicula">
+    </article>
+  </section>
+
+  <section class="seccion-peliculas">
+    <h3>Peliculas de suspenso</h3>
+    <article class="contenedor-pelicula">
+      <img src="img/accion/accion01.jpg" class="item-pelicula">
+      <img src="img/accion/accion02.jpg" class="item-pelicula">
+      <img src="img/accion/accion03.jpg" class="item-pelicula">
+      <img src="img/accion/accion04.jpg" class="item-pelicula">
+      <img src="img/accion/accion05.jpg" class="item-pelicula">
+    </article>
+  </section>
+
+  <section class="seccion-peliculas">
+    <h3>Series de epoca</h3>
+    <article class="contenedor-pelicula">
+      <img src="img/series/epoca/epoca1.jpg" class="item-pelicula">
+      <img src="img/series/epoca/epoca2.jpg" class="item-pelicula">
+      <img src="img/series/epoca/epoca3.jpg" class="item-pelicula">
+      <img src="img/series/epoca/epoca4.jpg" class="item-pelicula">
+      <img src="img/series/epoca/epoca5.jpg" class="item-pelicula">
+    </article>
+  </section>
+
+  <section class="seccion-peliculas">
+    <h3>Series de ciencia ficción</h3>
+    <article class="contenedor-pelicula">
+      <img src="img/accion/accion01.jpg" class="item-pelicula">
+      <img src="img/accion/accion02.jpg" class="item-pelicula">
+      <img src="img/accion/accion03.jpg" class="item-pelicula">
+      <img src="img/accion/accion04.jpg" class="item-pelicula">
+      <img src="img/accion/accion05.jpg" class="item-pelicula">
+    </article>
+  </section>
 </body>
+
 </html>

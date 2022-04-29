@@ -1,0 +1,162 @@
+body
+{
+    background-color: #000;
+    text-align: center;
+}
+main
+{
+    text-align: center; 
+    padding-left: 100px;    
+    padding-right: 100px;
+}
+h1
+{
+    font-size: xx-large;
+    color: white;
+}
+h2
+{
+    color: white;
+}
+h3
+{
+    text-align: start;
+    color: white;
+}
+.container
+{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+}
+.contenedor-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+article
+{
+    padding-top: 15px;
+}
+.input-text-custom
+{
+    background-color: #333333;
+    border-color: black;
+    color: white;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5em;
+
+}
+
+.banner
+{
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    background-image: url(../img/fondos-movie2.jpg);
+}
+.button
+{
+    background-color: orange;   
+    border-radius: 5em;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 10px;  
+    padding-bottom: 10px;  
+    text-align: center;  
+    font-size: 16px;
+    font-weight: 700;
+    display: inline-block;
+}
+.horizontal
+{
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    width: calc(80%);
+    overflow: hidden;
+}
+.horizontal li a {
+    display: inline-block;
+    color: gainsboro;
+    text-align: center;
+    padding-right: 30px;
+    padding-top: 40px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.horizontal li a:hover
+{
+    color: white;
+    font-weight: bold;
+}
+.logo
+{
+    width: 80px;
+    height: 60px;
+}
+.form-buscador
+{
+    padding-top: 3%;
+}
+.container-nav
+{
+    display: flex;
+    flex-wrap: nowrap;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    background-image: url(../img/fondos-movie2.jpg);
+}
+
+.contenedor-tipos{
+	display: flex;
+	flex-direction: column;/*si los hijos se muestran en filas o en columnas*/
+	justify-content: space-between;/*controla la alineación horizontal*/
+	align-items: center;/*controla la alineación vertical*/
+	flex-wrap: wrap;
+}
+
+.contenedor-destacadas{
+	display: flex;
+	flex-direction: row;/*si los hijos se muestran en filas o en columnas*/
+	justify-content: space-between;/*controla la alineación horizontal*/
+	align-items: center;/*controla la alineación vertical*/
+	flex-wrap: wrap;
+    padding: 20px
+}
+.item-destacada
+{
+    width: calc(48%);
+}
+.item-destacada:hover
+{
+    transform:scale(1.02,1.02)
+}
+.contenedor-pelicula{
+	display: flex;
+	flex-direction: row;/*si los hijos se muestran en filas o en columnas*/
+	justify-content: space-between;/*controla la alineación horizontal*/
+	align-items: center;/*controla la alineación vertical*/
+	flex-wrap: wrap;
+}
+.item-pelicula
+{
+	text-align: center;
+	background: #ccc;
+	border:2px solid #000;
+    margin-bottom:20px;
+	width: calc(20%);/*responde a las columnas*/
+	box-sizing: border-box;/*esta propiedad hace que el padding no ensanche los anchos*/ 
+}
+.item-pelicula:hover
+{
+    transform:scale(1.02,1.02)
+}
+.seccion-destacadas
+{
+    padding-top: 5%;
+}
