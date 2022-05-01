@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>unflix</title>
+</head>
+<body>
+    <nav class="container-nav">
+        <h1 style="width:calc(10%)">UNFLIX</h1>
+        <ul class="horizontal">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">Series</a></li>
+          <li><a href="#">Peliculas</a></li>
+          <li><a href="#">Perfil</a></li>
+          <li>
+            <form class="form-buscador" action="detallePelicula.html" method="get">
+              <select class="input-text-custom" name="categorias">
+                <option value="Default" selected>-Seleccione una categoria-</option>
+                <option value="Accion">Accion</option>
+                <option value="Suspenso">Suspenso</option>
+                <option value="Terror">Terror</option>
+              </select>
+              <input class="input-text-custom" type="search" placeholder="Buscar" id="idBusqueda" name="Busqueda">
+            </form>
+          </li>
+        </ul>
+      </nav>
+      <section class="contenido">
+        <article class="info-contenido">
+          <ul>
+            <li>titulo: The walking dead</li>
+            <form action="#" method="post">
+              <label for="temporada">temporada</label>
+              <select id="temporada" name="temporada">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+            <label for="capitulo">capitulo</label>
+            <select id="capitulo" name="capitulo">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+          </select>
+            </form>
+            <li>genero: Horror- Serial dramático- Apocalipsis zombi </li>
+            <li>Reparto: 
+              <a href="https://es.wikipedia.org/wiki/Andrew_Lincoln">andrew lincoln</a>
+              <a href="https://es.wikipedia.org/wiki/Jon_Bernthal">jon bernthal</a>
+              <a href="https://es.wikipedia.org/wiki/Sarah_Wayne_Callies">sarah wayne callies</a>
+            </li>
+            <li>The Walking Dead es una serie de televisión estadounidense de horror posapocalíptico de AMC basada en la serie de cómics homónima de Robert Kirkman, Tony Moore y Charlie Adlard. La serie presenta un gran elenco como sobrevivientes de un apocalipsis zombi, tratando de mantenerse con vida bajo la amenaza casi constante de ataques de los zombis sin conciencia, coloquialmente conocidos como «caminantes»</li>
+          </ul>
+          <a href="https://youtu.be/ReVKlBdPadYA" class="button-relative" target="_blanck">comenzar</a>       
+        </article>
+        <article>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/ReVKlBdPadY?controls=0&amp;start=3" 
+          title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </article>
+      </section>
+      <section class="seccion-peliculas">
+        <h3>sugerencias </h3>
+          <article>
+            <article class="contenedor-pelicula">
+              <img src="img/accion/accion01.jpg" class="item-pelicula">
+              <img src="img/accion/accion02.jpg" class="item-pelicula">
+              <img src="img/accion/accion03.jpg" class="item-pelicula">
+              <img src="img/series/epoca/epoca1.jpg" class="item-pelicula">
+              <img src="img/series/epoca/epoca2.jpg" class="item-pelicula">
+          </article>
+      </section>
+ 
+</body>
+</html>

@@ -5,35 +5,69 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/estilos.css">
+    <title>juego de ladrones</title>
+    <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
     <header>
-        <h1>Juego de ladrones</h1>
+        <h1></h1>
     </header>
     <main class="container-pelicula">
-        <section>
-            <p>Un grupo de ladrones de bancos de élite con formación militar planean un atraco en el Banco de la Reserva
-                Federal de Los Ángeles. Se trata de su mayor robo hasta el momento y consiste en robar los 120 millones
-                de dólares en efectivo que todos los días se sacan de la circulación. Los sigue de cerca Nick Flanagan
-                (Gerard Butler), sheriff local de Los Ángeles, que ha estado siguiendo al equipo de ladrones y no se
-                detendrá ante nada hasta verlos detenidos.
-
-                Thriller de acción que supone el debut en la dirección de Christian Gudegast, guionista de Objetivo:
-                Londres (2016). Gudegast escribe el guión junto a Paul Scheuring (Prisión Break). Sus actores
-                protagonistas son Gerard Butler (Geostorm, Dioses de Egipto), Pablo Schreiber (American Gods, Orange Is
-                the New Black), O'Shea Jackson Jr. (Ingrid Goes West, Straight Outta Compton), Sonya Balmores (Ballers,
-                Beyond the Break), Evan Jones (Guardianes de la galaxia Vol. 2, Deuda de honor), Meadow Williams (Camino
-                hacia el éxito, The Harvest) y el rapero 50 cent (Redención, Caza al asesino).</p>
-        </section>
-        <section>
+        <nav class="container-nav">
+            <h1 style="width:calc(10%)">UNFLIX</h1>
+            <ul class="horizontal">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="#">Series</a></li>
+              <li><a href="#">Peliculas</a></li>
+              <li><a href="#">Perfil</a></li>
+              <li>
+                <form class="form-buscador" action="detallePelicula.html" method="get">
+                  <select class="input-text-custom" name="categorias">
+                    <option value="Default" selected>-Seleccione una categoria-</option>
+                    <option value="Accion">Accion</option>
+                    <option value="Suspenso">Suspenso</option>
+                    <option value="Terror">Terror</option>
+                  </select>
+                  <input class="input-text-custom" type="search" placeholder="Buscar" id="idBusqueda" name="Busqueda">
+                </form>
+              </li>
+            </ul>
+          </nav>
+          <section class="contenido">
+            <article class="info-contenido">
+            <ul>
+              <li>Titulo: juego de ladrones</li>
+              <li>Duracion: 140 minutos</li>
+              <li>Genero: Thriller. Acción. Drama</li>
+              <li>Reparto: 
+                <a href="https://es.wikipedia.org/wiki/Gerard_Butler">gerard butler </a>
+                <a href="https://es.wikipedia.org/wiki/Pablo_Schreiber">pablo schreiber</a>
+                <a href="https://es.wikipedia.org/wiki/O%27Shea_Jackson_Jr.">O'Shea jackson jr</a>
+              </li>
+              <li>Resumen: Todos los días, el banco de la Reserva Federal de Los Ángeles saca de la circulación 120 millones de dólares en efectivo. Un grupo de experimentados ladrones planea su gran atraco final: robar esos 120 millones, pero el departamento del Sheriff de Los Ángeles, la brigada más temida de la ciudad liderada por 'El gran Nick' (Gerard Butler), no está dispuesto a ponérselo fácil.</li>
+            </ul>
+            <a href="https://youtu.be/TW-WEXZILNA" class="button-relative" target="_blank">comenzar</a>
+          </article>
+          <article>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/TW-WEXZILNA"
                 title="YouTube video player" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen></iframe>
+          </article>
         </section>
+        <section class="seccion-peliculas">
+          <h3>sugerencias </h3>
+            <article>
+              <article class="contenedor-pelicula">
+                <img src="img/accion/accion01.jpg" class="item-pelicula">
+                <img src="img/accion/accion02.jpg" class="item-pelicula">
+                <img src="img/accion/accion03.jpg" class="item-pelicula">
+                <img src="img/series/epoca/epoca1.jpg" class="item-pelicula">
+                <img src="img/series/epoca/epoca2.jpg" class="item-pelicula">
+            </article>
+        </section>
+
     </main>
 </body>
 

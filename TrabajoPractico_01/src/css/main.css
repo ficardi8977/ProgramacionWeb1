@@ -50,14 +50,6 @@ article
     border-radius: 5em;
 
 }
-
-.banner
-{
-    width: 100%;
-    height: 200px;
-    border-radius: 10px;
-    background-image: url(../img/fondos-movie2.jpg);
-}
 .button
 {
     background-color: orange;   
@@ -159,4 +151,50 @@ article
 .seccion-destacadas
 {
     padding-top: 5%;
+}
+
+/*agregados*/
+p{
+    color: white;
+}
+.contenido{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 90px;
+    text-align: left;
+    
+}
+li{
+    color: #ccc;
+    overflow: hidden;
+    
+}
+.registro{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 30px;
+    margin-left: 30px;
+    border: #333333 solid ;
+    padding: 10%;
+}
+.info-contenido
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.button-relative
+{
+    background-color: orange;   
+    border-radius: 5em;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 10px;  
+    padding-bottom: 10px;  
+    text-align: center;  
+    font-size: 16px;
+    font-weight: 700;
+    display: inline-block;
+    position: relative;
+    top: 100px
 }

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/login.css">
+    <title>unflix</title>
+</head>
+<body>
+    <header>
+        <section>
+            <img class="banner">
+        </section>
+    </header>
+    <main>
+        <h1>Registrarse</h1>
+        <section >
+             <form action="#" method="get" class="registro">
+                <article>
+                    <label for="Nombre">Nombre:</label>
+                    <input type="text" name="nombre" id="nombre" required autofocus placeholder="Nombre de usuario">
+                    <br>
+                    <label for="apellido">Apellido:</label>
+                    <input type="text" name="apellido" id="apellido" required placeholder="Apellido de usuario">
+                    <br>
+                    <label for="email">E-mail:</label>
+                    <input type="text" name="email" id="email" required placeholder="ingrese email">
+                    <br>
+                    <label for="usuario">Nombre de usuario:</label>
+                    <input type="text" name="usuario" id="usuario" required placeholder="Nombre de usuario">
+                    <br>
+                    <label for="contraseña">contraseña:</label>
+                    <input type="password" name="pass" id="pass" >
+                    <br>
+                    <label for="contraseña">contraseña:</label>
+                    <input type="password" name="pass" id="pass" >
+                </article>
+                <article>
+                        <p>metodo de pago</p>
+                        <input id="tarjeta" type="radio" name="tipo_pago" value="tarjeta" checked ><p> Tarjeta de credito</p>
+                        <input id="tarjeta_numero" type="text" name="tarjeta_numero" placeholder="numero de tarjeta" pattern="[0-9]{12}">
+                        <input id="cupon" type="radio" name="tipo_pago" value="cupon"><p>cupon de pago</p>
+                        <input id="pago_facil" type="checkbox" name="pago_facil" value="pago facil"><label for="pago_facil">pago facil </label>
+                        <input id="rapi_pago" type="checkbox" name="rapi_pago" value="rapi_pago"><label for="rapi_pago">rapi pago</label>
+                        <input id="transferencia" type="radio" name="tipo_pago" value="trasferencia"> tranferencia bancaria
+                        <p>CBU:18582375763870</p>
+                <article><a class="button_in" href="login.html">Registrarse</a></article>
+                <article><a class="button_out" href="login.html">cancelar</a></article>
+
+                </article>
+            </form>
+            
+        </section>
+    </main>
+
+    
+</body>
+</html>
