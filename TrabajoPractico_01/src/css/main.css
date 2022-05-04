@@ -16,12 +16,16 @@ h1
 }
 h2
 {
-    color: white;
+    color: white;<
 }
 h3
 {
     text-align: start;
     color: white;
+}
+p
+{
+    color: gainsboro;
 }
 .container
 {
@@ -48,7 +52,16 @@ article
     margin: 10px;
     padding: 10px;
     border-radius: 5em;
-
+}
+.input-text-custom-short
+{
+    background-color: #333333;
+    border-color: black;
+    color: white;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5em;
+    width: 70px;
 }
 .button
 {
@@ -151,11 +164,6 @@ article
 .seccion-destacadas
 {
     padding-top: 5%;
-}
-
-/*agregados*/
-p{
-    color: white;
 }
 .contenido{
     display: flex;

@@ -1,33 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/login.css">
-    <title>unflix</title>
+    <link rel="stylesheet" href="css/recuperacion.css">
+    <title>Unflix</title>
 </head>
-<body>
-    <header>
-        <section>
-            <img class="banner">
-        </section>
+
+<body class="contenedor-login">
+    <header class="banner">
     </header>
-    <main>
-        <h1>recuperar contraseña</h1>
-        <section>
-            <form method="get" class="contenedor-form">
-                <article>
-                    <input class="input-text-custom" type="text" placeholder="Email" autofocus required>
-                </article>
-                    <article><input class="input-text-custom" type="text" placeholder="Nombre de usuario" required>
+    <main class="contenedor-datos-login">
+        <section class="container-login">
+            <article>
+                <h1>Recuperar contraseña</h1>
+                <form class="container-form">
+                    <article><input class="input-text-custom" type="text" placeholder="Email" required>
                     </article>
-                    <article><a class="button_in" href="login.html">Enviar gmail</a></article>
-                    <article><a class="button_out" href="login.html">cancelar</a></article>
-            </form>
+                    <article><input class="input-text-custom" type="text" placeholder="nombre de usuario" required>
+                    </article>
+                    <article class="buttons-columns">
+                    <button class="button"><a href="index.html">Enviar Mail</a></button>
+                    <button class="button"><a href="login.html">Cancelar</a></button>
+                    </article>
+                </form>
+            </article>
         </section>
     </main>
-    
 </body>
+
 </html>
