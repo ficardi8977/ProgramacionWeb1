@@ -1,0 +1,17 @@
+section
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; 
+    align-items: center;   
+    flex-wrap: wrap;
+    background-color: aqua;
+}
+article
+{
+    flex-basis: calc(20% -1em);
+    background-color: yellow;
+    padding: 1em;
+    border-color: pink;
+    border-style: solid; 
+}

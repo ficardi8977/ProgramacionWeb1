@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/registrar.css">
+    <link rel="stylesheet" href="css/perfil.css">
+    <title>UNFLIX</title>
+</head>
+
+<body>
+    <nav class="container-nav">
+        <h1 style="width:calc(10%)">UNFLIX</h1>
+        <ul class="horizontal">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="series.html">Series</a></li>
+            <li><a href="peliculas.html">Peliculas</a></li>
+            <li><a href="perfil.html">Perfil</a></li>
+            <li>
+                <form class="form-buscador" action="detallePelicula.html" method="get">
+                    <select class="input-text-custom" name="categorias">
+                        <option value="Default" selected>-Seleccione una categoria-</option>
+                        <option value="Accion">Accion</option>
+                        <option value="Suspenso">Suspenso</option>
+                        <option value="Terror">Terror</option>
+                    </select>
+                    <input class="input-text-custom" type="search" placeholder="Buscar" id="idBusqueda" name="Busqueda">
+                </form>
+            </li>
+        </ul>
+    </nav>
+    <main class="contenedor-perfil">
+        <section>
+            <img class="imagen-pefil" src="img/popcorn.png">
+            <h3>nombre de usuario</h3>
+        </section>
+        <section class="mail-contraseña">
+            <article class="article-label">
+                <label>Email:</label>
+                <label class="label-carga">mailusuario@gmail.com</label>
+            </article>
+            <article class="article-label">
+                <label>Contraseña:</label>
+                <label class="label-carga">**********</label>
+            </article>
+            <article>
+                <label>Nueva contraseña:</label>
+                <input id="nueva_contraseña" type="text" class="input-text-custom" name="nueva_contraseña" placeholder="nueva contraseña">
+            </article>
+            <article>
+                <label>Repetir contraseña:</label>
+                <input id="repetir_contraseña" type="text" class="input-text-custom" name="repetir_contraseña" placeholder="repetir contraseña">
+            </article>
+        </section>
+        <section>
+            <h3>Metodo de pago</h3>
+            <section class="metodos-pago">
+                <article class="tarjetas">
+                    <input id="tarjeta" type="radio" name="tipo_pago" class="radios" value="tarjeta" checked>
+                    <p> Tarjeta de credito</p>
+                </article>
+                <article class="tarjetas">
+                    <input id="tarjeta_numero" type="text" class="input-text-custom" name="tarjeta_numero"
+                        placeholder="numero de tarjeta" pattern="[0-9]{12}">
+                    <input id="tarjeta_codigo" type="text" class="input-text-custom-short" name="tarjeta_codigo"
+                        placeholder="xxx" pattern="[0-9]{12}">
+                </article>
+            </section>
+            <section class="metodos-pago">
+                <article class="tarjetas">
+                    <input id="cupon" type="radio" name="tipo_pago" value="cupon">
+                    <p>Cupon de pago</p>
+                </article>
+                <article class="tarjetas">
+                    <input class="input-pad" id="pago_facil" type="checkbox" name="pago_facil" value="pago facil"><label
+                        class="label-blanco" for="pago_facil">pago facil </label>
+                    <input class="input-pad" id="rapi_pago" type="checkbox" name="rapi_pago" value="rapi_pago"><label
+                        class="label-blanco" for="rapi_pago">rapi pago</label>
+                </article>
+            </section>
+            <section class="metodos-pago">
+                <article class="tarjetas">
+                    <input id="transferencia" type="radio" name="tipo_pago" value="trasferencia">
+                    <p>Tranferencia bancaria</p>
+                </article>
+                <p class="cbu">CBU:18582375763870</p>
+            </section>
+        </section>
+    </main>
+    <section>
+        <button>Guardar cambios</button>
+        <button>Cancelar subscripción</button>
+    </section>
+</body>
+
+</html>

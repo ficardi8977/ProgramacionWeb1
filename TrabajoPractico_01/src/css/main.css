@@ -16,7 +16,7 @@ h1
 }
 h2
 {
-    color: white;<
+    color: white;
 }
 h3
 {
@@ -205,4 +205,12 @@ li{
     display: inline-block;
     position: relative;
     top: 100px
+}
+label
+{
+    color: white;
+}
+h3
+{
+    text-align: center;
 }

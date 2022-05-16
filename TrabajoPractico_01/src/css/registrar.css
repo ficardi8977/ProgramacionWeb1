@@ -16,7 +16,7 @@
 {
     background-color: rgba(0, 0, 0, 0.61);
     width: 300px;;
-    height: 900px;
+    height: 100%;
     align-items: center;
 }
 .radios
@@ -32,4 +32,12 @@
 .label-blanco
 {
     color: white;
+}
+.input-pad
+{
+    margin-left: 2em
+}
+.cbu
+{
+    padding-right: 7em;
 }

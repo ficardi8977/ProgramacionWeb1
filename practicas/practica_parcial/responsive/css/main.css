@@ -1,0 +1,35 @@
+section
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;    
+    flex-wrap: wrap;
+    background-color: aqua;
+}
+article
+{
+    padding: 3em;
+    width: calc(100% - 1em);
+    margin-bottom: 1em;
+    background-color: yellow;
+    border-color: pink;
+    border-style: solid;
+    box-sizing: border-box;
+    align-items: center;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/*Tablet 768px - 48em*/
+@media screen and (min-width:48em){
+    article{
+        width: calc(50% - 1em);
+        flex-basis: 3em;
+    }
+}
+
+/*Pcs de escritorio 1024px - 60em*/
+@media screen and (min-width:60em){
+    article{
+        width: calc(25% - 1em);
+    }
+}

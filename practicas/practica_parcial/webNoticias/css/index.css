@@ -1,0 +1,46 @@
+.portal-principales
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 3em;
+}
+.noticias-principales
+{       
+    width: calc(50%+1em);  
+    margin-right: 1em  
+}
+.noticias-verticales
+{
+    display: flex;
+    width: calc(50%+1em);
+    flex-direction: column;
+}
+.div-imagen
+{
+    width: 50%;
+}
+.div-imagen-principal
+{
+    width: 50%;
+    margin: auto;
+}
+.menu
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.titulo
+{
+    color: orange;
+}
+li
+{
+    list-style: none;
+}
+img
+{
+    object-fit: contain
+}
