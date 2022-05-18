@@ -41,3 +41,15 @@
 {
     padding-right: 7em;
 }
+
+.accion-registrar
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1em;
+}
+h2
+{
+    text-align: center;
+}

@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/registrar.css">
     <link rel="stylesheet" href="css/perfil.css">
@@ -13,7 +16,8 @@
 
 <body>
     <nav class="container-nav">
-        <h1 style="width:calc(10%)">UNFLIX</h1>
+        <h1 class="unflix-title">UnfliX</h1>
+        <img class="logo" src="../src/img/logo.PNG">
         <ul class="horizontal">
             <li><a href="index.html">Home</a></li>
             <li><a href="series.html">Series</a></li>
@@ -34,10 +38,11 @@
     </nav>
     <main class="contenedor-perfil">
         <section>
-            <img class="imagen-pefil" src="img/popcorn.png">
-            <h3>nombre de usuario</h3>
+            <h3>Nombre de usuario</h3>
+            <img class="imagen-pefil" src="img/imagen-pefil.jpg">
         </section>
         <section class="mail-contraseña">
+            <h3>Datos de mail y contraseña</h3>
             <article class="article-label">
                 <label>Email:</label>
                 <label class="label-carga">mailusuario@gmail.com</label>
@@ -90,9 +95,9 @@
             </section>
         </section>
     </main>
-    <section>
-        <button>Guardar cambios</button>
-        <button>Cancelar subscripción</button>
+    <section class="accion-registrar">
+        <a class= "btn-aceptar" href="index.html">Guardar</a></button>
+        <a class= "btn-cancelar" href="index.html">Cancelar</a></button>
     </section>
 </body>
 
