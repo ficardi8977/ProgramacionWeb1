@@ -53,3 +53,13 @@ h2
 {
     text-align: center;
 }
+.mensajeError
+{
+    color: rgb(221, 144, 144);
+}
+.linea-form
+{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="css/registrar.css">
+    <script src=js/validaciones.js></script>
     <title>Unflix</title>
 </head>
 
@@ -17,20 +18,43 @@
     <main class="contenedor-datos-registrar">
         <section class="container-regitrar">
             <h2>Registrarse</h2>
-            <form action="#" method="get">
+            <form id="FormRegistrar" action="home.html" onsubmit="return validacionesFormulario(this);" method="get">
                 <section>
                     <h3>Datos de usuario</h3>
-                    <input class="input-text-custom" type="text" name="nombre" id="nombre" required autofocus
-                        placeholder="Nombre">
-                    <input class="input-text-custom" type="text" name="apellido" id="apellido" required
-                        placeholder="Apellido">
-                    <input class="input-text-custom" type="text" name="email" id="email" required placeholder="Email">
-                    <input class="input-text-custom" type="text" name="usuario" id="usuario" required
+                    
+                    <article class="linea-form">
+                        <input class="input-text-custom" type="text" name="nombre" id="nombre" placeholder="Nombre">
+                        <span id="nombreError"class="mensajeError"></span>
+                    </article>
+
+                    <article class="linea-form">                        
+                        <input class="input-text-custom" type="text" name="apellido" id="apellido" placeholder="Apellido">
+                        <span id="apellidoError"class="mensajeError"></span>
+                    </article>
+
+                    <article class="linea-form"> 
+                        <input class="input-text-custom" type="email" name="email" id="email" placeholder="Email">
+                        <span id="emailError"class="mensajeError"></span>
+                    </article> 
+                    
+                    <article class="linea-form"> 
+                        <input class="input-text-custom" type="text" name="usuario" id="usuario"
                         placeholder="Nombre de usuario">
-                    <input class="input-text-custom" type="password" name="pass" id="pass" required
+                        <span id="usuarioError"class="mensajeError"></span>
+                    </article> 
+                    
+                    <article class="linea-form"> 
+                        <input class="input-text-custom" type="password" name="pass" id="pass"
                         placeholder="Contraseña">
-                    <input class="input-text-custom" type="password" name="pass" id="pass" required
-                        placeholder="Repetir contraseña">
+                        <span id="ContraseñaError"class="mensajeError"></span>
+                    </article> 
+
+                    <article class="linea-form"> 
+                        <input class="input-text-custom" type="password" name="pass" id="passConfirmar"
+                        placeholder="Contraseña">
+                        <span id="ContraseñaConfirmarError"class="mensajeError"></span>
+                    </article> 
+
                 </section>
                 <section>
                     <h3>Metodo de pago</h3>
@@ -67,8 +91,8 @@
                 <section class="metodos-pago">
                 </section>
                 <section class="accion-registrar">
-                <article><a class="btn-aceptar" href="index.html">Registrar</a></article>
-                <article><a class="btn-cancelar" href="index.html">Cancelar</a></article>
+                <input id ="btnRegistrar" class="btn-aceptar" type="submit" value="Registrar">
+                <button class="btn-cancelar"><a href="index.html">Cancelar</a></button>
                 </section>
         </section>
         </form>
