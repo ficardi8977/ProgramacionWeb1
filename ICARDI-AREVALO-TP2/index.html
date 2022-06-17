@@ -17,18 +17,25 @@
         <section class="container-login">
             <article>
                 <h2>Inicia sesión</h2>
-                <form id="frmRegistrar" class="container-form" action="home.html">
-                    <article><input class="input-text-custom" type="text" placeholder="Nombre de usuario" required>
+                <form id="frmLogin" class="container-form" action="home.html" method="get">
+                    <article class ="container-flex-column" ><input id="usuario" class="input-text-custom" type="text" placeholder="Nombre de usuario">
+                        <span id="usuarioError" class="mensajeError">&nbsp</span>
                     </article>
-                    <article><input class="input-text-custom" type="password" placeholder="Contraseña" required>
+                    <article class ="container-flex-column">
+                        <input id="pass" class="input-text-custom" type="password" placeholder="Contraseña">
+                        <span id="passError" class="mensajeError">&nbsp</span>
                     </article>
-                    <input class="btn-aceptar" type="submit" value="Iniciar sesión">
+                    <article><input class="btn-aceptar" type="submit" value="Iniciar sesión"></article>
                 </form>
             </article>
             <article><a href="recuperacion.html">Recuperar contraseña</a></article>
             <article><a href="registrar.html">Registrarse</a></article>
         </section>
     </main>
+    <script src=js/login.js></script>
+    <script src=js/localStorage.js></script>
+    <script src=js/validaciones.js></script>
+
 </body>
 
 </html>

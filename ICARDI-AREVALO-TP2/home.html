@@ -23,18 +23,19 @@
       <li><a href="perfil.html">Perfil</a></li>
       <li>
         <form class="form-buscador" action="detallePelicula.html" method="get">
-          <select class="input-text-custom" name="categorias">
-            <option value="Default" selected>-Seleccione una categoria-</option>
-            <option value="Accion">Accion</option>
-            <option value="Suspenso">Suspenso</option>
-            <option value="Terror">Terror</option>
+          <select id="selectorHome" class="input-text-custom" name="categorias">
+            <option value="0" selected>-Seleccione una categoria-</option>
+            <option value="1">Animadas</option>
+            <option value="2">Epoca</option>
+            <option value="3">Fantasia</option>
+            <option value="4">Terror</option>
           </select>
           <input class="input-text-custom" type="search" placeholder="Buscar" id="idBusqueda" name="Busqueda">
         </form>
       </li>
     </ul>
   </nav>
-  <section class="seccion-destacadas">
+  <section id = "seccionDestacadas" class="seccion-destacadas">
     <h1>Destacadas de la semana</h1>
     <article class="contenedor-destacadas">
       <a class="item-destacada" href="detallePelicula.html"><img class="img-destacada" src="img/destacadas/peliDestacada.jpg"></a>
@@ -42,7 +43,7 @@
     </article>
   </section>
 
-  <section class="seccion-peliculas">
+  <section id = "seccionTerror"class="seccion-peliculas">
     <h2>Peliculas de Terror</h2>
     <article class="contenedor-pelicula">
       <a href="detallePelicula.html"><img src="img/peliculas/terror/terror1.jpg" class="item-pelicula"></a>
@@ -53,7 +54,7 @@
     </article>
   </section>
 
-  <section class="seccion-peliculas">
+  <section id = "seccionEpoca" class="seccion-peliculas">
     <h2>Series de epoca</h2>
     <article class="contenedor-pelicula">
       <a href="detalleSerie.html"><img src="img/series/epoca/epoca1.jpg" class="item-pelicula"></a>
@@ -64,7 +65,7 @@
     </article>
   </section>
 
-  <section class="seccion-peliculas">
+  <section id = "seccionAnimadas" class="seccion-peliculas">
     <h2>Peliculas animadas</h2>
     <article class="contenedor-pelicula">
       <a href="detallePelicula.html"><img src="img/peliculas/animadas/animada1.jpg" class="item-pelicula"></a>
@@ -75,7 +76,7 @@
     </article>
   </section>
 
-  <section class="seccion-peliculas">
+  <section id = "seccionFantasia" class="seccion-peliculas">
     <h2>Series de fantasia</h2>
     <article class="contenedor-pelicula">
       <a href="detalleSerie.html"><img src="img/series/fantasia/fantasia1.jpg" class="item-pelicula"></a>
@@ -85,6 +86,7 @@
       <a href="detalleSerie.html"><img src="img/series/fantasia/fantasia5.jpg" class="item-pelicula"></a>
     </article>
   </section>
+  <script src=js/home.js></script>
 </body>
 
 </html>

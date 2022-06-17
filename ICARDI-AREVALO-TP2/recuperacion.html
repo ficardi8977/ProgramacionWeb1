@@ -18,19 +18,26 @@
         <section class="container-login">
             <article>
                 <h2>Recuperar contraseña</h2>
-                <form class="container-form">
-                    <article><input class="input-text-custom" type="text" placeholder="Email" required>
+                <form id="frmRecuperacion" class="container-form" action="index.html" >
+                    <article class ="container-flex-column">
+                        <input id="email" class="input-text-custom" name="email" type="text" placeholder="Email">
+                        <span id="emailError" class="mensajeError">&nbsp</span>
                     </article>
-                    <article><input class="input-text-custom" type="text" placeholder="nombre de usuario" required>
+                    <article class ="container-flex-column">
+                        <input id="usuario" class="input-text-custom" name = "email" type="text" placeholder="nombre de usuario">
+                        <span id="usuarioError" class="mensajeError">&nbsp</span>
                     </article>
                     <article class="buttons-columns">
-                    <a class= "btn-aceptar" href="home.html">Enviar mail</a></button>
-                    <a class= "btn-cancelar" href="index.html">Cancelar</a></button>
+                        <input id ="btnEnviar" type="submit" class="btn-aceptar" value="Enviar mail" disabled>
+                        <button class="btn-cancelar"><a href="index.html">Cancelar</a></button>
                     </article>
                 </form>
             </article>
         </section>
     </main>
+    <script src=js/localStorage.js></script>
+    <script src=js/validaciones.js></script>
+    <script src=js/recuperacion.js></script>
 </body>
 
 </html>

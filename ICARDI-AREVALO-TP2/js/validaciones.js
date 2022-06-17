@@ -1,24 +1,3 @@
-function validacionesFormulario() {
-
-    limpiarMensajesError();
-
-    let esValido = true;
-    let nombreElement = document.getElementById("nombre");
-    if (!validarRequerido(nombreElement) || !validarSoloCaracter(nombreElement)) {
-        esValido = false;
-    }
-    let apellidoElement = document.getElementById("apellido");
-    if (!validarRequerido(apellidoElement) || !validarSoloCaracter(apellidoElement)) {
-        esValido = false;
-    }
-    let emailElement = document.getElementById("email");
-    if (!validarRequerido(emailElement) || !validarMail(emailElement)) {
-        esValido = false;
-    }
-    return esValido;
-}
-
-
 function validarSoloCaracter(nombre) {
     let esValido = true;
     if (!/^[a-zA-Z]*$/g.test(nombre.value)) {
@@ -49,13 +28,17 @@ function validarMail(email) {
         let mensajeError = document.getElementById(email.id + "Error");
         mensajeError.textContent = "Debe contener el formato mail";
         esValido = false;
-    } 
+    }
     return esValido;
 }
 
-function limpiarMensajesError(nombre){
-
-    document.getElementById("nombreError").textContent = "";
-    document.getElementById("apellidoError").textContent = "";
-    document.getElementById("emailError").textContent = "";
+function validarSoloLetrasYNumeros(nombre){
+    let esValido = true;
+    if (!/^[a-zA-Z0-9]*$/g.test(nombre.value)) {
+        let mensajeError = document.getElementById(nombre.id + "Error");
+        mensajeError.textContent = "Debe contener unicamente letras y numeros";
+        nombre.focus();
+        esValido = false;
+    }
+    return esValido;
 }
