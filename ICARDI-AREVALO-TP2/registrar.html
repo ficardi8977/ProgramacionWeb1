@@ -23,35 +23,35 @@
 
                     <article class="linea-form">
                         <input class="input-text-custom" type="text" name="nombre" id="nombre" placeholder="Nombre">
-                        <span id="nombreError" class="mensajeError"></span>
+                        <span id="nombreError" class="mensajeError">&nbsp</span>
                     </article>
 
                     <article class="linea-form">
                         <input class="input-text-custom" type="text" name="apellido" id="apellido"
                             placeholder="Apellido">
-                        <span id="apellidoError" class="mensajeError"></span>
+                        <span id="apellidoError" class="mensajeError">&nbsp</span>
                     </article>
 
                     <article class="linea-form">
                         <input class="input-text-custom" type="email" name="email" id="email" placeholder="Email">
-                        <span id="emailError" class="mensajeError"></span>
+                        <span id="emailError" class="mensajeError">&nbsp</span>
                     </article>
 
                     <article class="linea-form">
                         <input class="input-text-custom" type="text" name="usuario" id="usuario"
                             placeholder="Nombre de usuario">
-                        <span id="usuarioError" class="mensajeError"></span>
+                        <span id="usuarioError" class="mensajeError">&nbsp</span>
                     </article>
 
                     <article class="linea-form">
                         <input class="input-text-custom" type="password" name="pass" id="pass" placeholder="Contraseña">
-                        <span id="ContraseñaError" class="mensajeError"></span>
+                        <span id="passError" class="mensajeError">&nbsp</span>
                     </article>
 
                     <article class="linea-form">
                         <input class="input-text-custom" type="password" name="pass" id="passConfirmar"
-                            placeholder="Contraseña">
-                        <span id="ContraseñaConfirmarError" class="mensajeError"></span>
+                            placeholder="Repetir contraseña">
+                        <span id="passConfirmarError" class="mensajeError">&nbsp</span>
                     </article>
 
                 </section>
@@ -59,34 +59,44 @@
                     <h3>Metodo de pago</h3>
                     <section class="metodos-pago">
                         <article class="tarjetas">
-                            <input id="tarjeta" type="radio" name="tipo_pago" class="radios" value="tarjeta" checked>
+                            <input id="tarjeta" type="radio" name="tipoPago" class="radios" value="tarjeta" checked>
                             <p> Tarjeta de credito</p>
                         </article>
-                        <article class="tarjetas">
-                            <input id="tarjeta_numero" type="text" class="input-text-custom" name="tarjeta_numero"
-                                placeholder="numero de tarjeta" pattern="[0-9]{12}">
-                            <input id="tarjeta_codigo" type="text" class="input-text-custom-short" name="tarjeta_codigo"
-                                placeholder="xxx" pattern="[0-9]{12}">
+                        <article class="linea-form">
+                            <div class="tarjetas">
+                                <input id="numeroTarjeta" type="text" class="input-text-custom" name="tarjeta_numero"
+                                    placeholder="numero de tarjeta">
+                                <input id="codigoTarjeta" type="text" class="input-text-custom-short"
+                                    name="tarjeta_codigo" placeholder="xxx">
+                            </div>
+                            <span id="numeroTarjetaError" class="mensajeError"></span>
+                            <span id="codigoTarjetaError" class="mensajeError"></span>
                         </article>
                     </section>
                     <section class="metodos-pago">
                         <article class="tarjetas">
-                            <input id="cupon" type="radio" name="tipo_pago" value="cupon">
+                            <input id="cupon" type="radio" name="tipoPago" value="cupon">
                             <p>Cupon de pago</p>
                         </article>
-                        <article class="tarjetas">
-                            <input class="input-pad" id="pago_facil" type="checkbox" name="pago_facil"
-                                value="pago facil"><label class="label-blanco" for="pago_facil">pago facil </label>
-                            <input class="input-pad" id="rapi_pago" type="checkbox" name="rapi_pago"
-                                value="rapi_pago"><label class="label-blanco" for="rapi_pago">rapi pago</label>
+                        <article class="linea-form">
+                            <div class="tarjetas">
+                                <input class="input-pad" id="pagoFacil" type="checkbox" name="cupon"
+                                    value="pago facil"><label class="label-blanco" for="pago_facil">pago facil </label>
+                                <input class="input-pad" id="rapiPago" type="checkbox" name="cupon"
+                                    value="rapi_pago"><label class="label-blanco" for="rapi_pago">rapi pago</label>
+                            </div>
+                            <span id="cuponError" class="mensajeError">&nbsp</span>
                         </article>
                     </section>
-                    <section class="metodos-pago">
-                        <article class="tarjetas">
-                            <input id="transferencia" type="radio" name="tipo_pago" value="trasferencia">
-                            <p>Tranferencia bancaria</p>
-                        </article>
-                        <p class="cbu">CBU:18582375763870</p>
+                    <section class="linea-form">
+                        <div class="metodos-pago">
+                            <article class="tarjetas">
+                                <input id="transferencia" type="radio" name="tipoPago" value="trasferencia">
+                                <p>Tranferencia bancaria</p>
+                            </article>
+                            <input id="cbu" class="input-text-custom" type="text" name="cbu" placeholder="CBU">
+                        </div>
+                        <span id="cbuError" class="mensajeError">&nbsp</span>
                     </section>
                 </section>
                 <section class="metodos-pago">
@@ -101,7 +111,7 @@
         </section>
     </main>
     <script src=js/registrar.js></script>
-    <script src=js/localStorage.js></script>    
+    <script src=js/localStorage.js></script>
     <script src=js/validaciones.js></script>
 
 </body>

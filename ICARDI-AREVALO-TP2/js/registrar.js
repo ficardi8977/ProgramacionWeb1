@@ -1,26 +1,49 @@
+/////// EVENTOS ////////////////////////////////////////////////////////
 const form = document.getElementById('FormRegistrar');
 
 form.addEventListener('submit', (event) => {
-    event.preventDefault()
     if (validacionesFormulario()) {
-        let usuario = document.getElementById("usuario").value;
-        let nombre = document.getElementById("nombre").value;
-        let apellido = document.getElementById("apellido").value;
-        let email = document.getElementById("email").value;
-        let pass = document.getElementById("pass").value;
-        let numeroTarjeta = document.getElementById("numeroTarjeta").value;
-        let codigoTarjeta = document.getElementById("codigoTarjeta").value;
-        let cuponPago = document.getElementById("cuponPago").value;
-        let cbu = document.getElementById("cbu").value;
-        
-        RegistrarPerfil(usuario,nombre,apellido,email,pass,numeroTarjeta,codigoTarjeta,cuponPago,cbu);
+        registrarPerfil(
+            document.getElementById("usuario").value, 
+            document.getElementById("nombre").value, 
+            document.getElementById("apellido").value, 
+            document.getElementById("email").value, 
+            document.getElementById("tarjeta").checked, 
+            document.getElementById("cupon").checked, 
+            document.getElementById("transferencia").checked, 
+            document.getElementById("numeroTarjeta").value, 
+            document.getElementById("codigoTarjeta").value, 
+            document.getElementById("rapiPago").checked,
+            document.getElementById("pagoFacil").checked,
+            document.getElementById("cbu").value);
 
     } else {
-        alert("no valido");
-        //event.preventDefault(); // si no cumple cancela el submit;
+        alert("No valido");
+        event.preventDefault(); // si no cumple cancela el submit;
     }
 });
 
+
+document.getElementById("tarjeta").addEventListener('change', (event) => {
+    document.getElementById("cbu").value ="";
+    document.getElementById("rapiPago").checked =false;
+    document.getElementById("pagoFacil").checked =false;
+});
+document.getElementById("cupon").addEventListener('change', (event) => {
+    document.getElementById("numeroTarjeta").value ="";
+    document.getElementById("codigoTarjeta").value ="";
+    document.getElementById("cbu").value ="";
+
+});
+document.getElementById("transferencia").addEventListener('change', (event) => {
+    document.getElementById("numeroTarjeta").value ="";
+    document.getElementById("codigoTarjeta").value ="";
+    document.getElementById("rapiPago").checked =false;
+    document.getElementById("pagoFacil").checked =false;
+});
+
+//////////////////////////////////////////////////////////////////////////////////////////
+/////// FUNCIONES  ///////////////////////////////////////////////////////////////////////
 
 function validacionesFormulario() {
     limpiarMensajesError();
@@ -37,11 +60,65 @@ function validacionesFormulario() {
     if (!validarRequerido(emailElement) || !validarMail(emailElement)) {
         esValido = false;
     }
+    let usuarioElement = document.getElementById("usuario");
+    if (!validarRequerido(usuarioElement) || !validarSoloLetrasYNumeros(usuarioElement)) {
+        esValido = false;
+    }
+    let passElement = document.getElementById("pass");
+    if (!validarRequerido(passElement) || !validarContraseña(passElement)) {
+        esValido = false;
+    }
+    let passConfirmarElement = document.getElementById("passConfirmar");
+    if (!validarRequerido(passConfirmarElement) || !validarIgual(passConfirmarElement, passElement)) {
+        esValido = false;
+    }
+
+    let tiposPago = document.getElementsByName("tipoPago");
+    tiposPago.forEach((element) => {
+        if (element.checked) {
+            if (element.id == "cupon") {
+                let cupon = document.getElementsByName("cupon");
+                if (!validarCheckeado(cupon, 'cupon')) {
+                    esValido = false;
+                }
+            }
+            if (element.id == "tarjeta") {
+                let codigoTarjetaElement = document.getElementById("codigoTarjeta");
+                if (!validarRequerido(codigoTarjetaElement) || !validarNumerosCodigoTarjeta(codigoTarjetaElement)) {
+                    esValido = false;
+                }
+                let numeroTarjetaElement = document.getElementById("numeroTarjeta");
+                if (!validarRequerido(numeroTarjetaElement) || !validarNumeroTarjeta(numeroTarjetaElement)) {
+                    esValido = false;
+                }
+                let errorCodigo = document.getElementById(codigoTarjetaElement.id + "Error").textContent;
+                let errorNumero = document.getElementById(numeroTarjetaElement.id + "Error").textContent;
+                if (errorCodigo != "") {
+                    document.getElementById(codigoTarjetaElement.id + "Error").textContent = "Código de tarjeta : " + errorCodigo;
+                } if (errorNumero != "") {
+                    document.getElementById(numeroTarjetaElement.id + "Error").textContent = "Número de tarjeta : " + errorNumero;
+                }
+
+            }
+            if (element.id == "transferencia") {
+                let cbuElement = document.getElementById("cbu");
+                if (!validarSoloNumeros(cbuElement) && !validarRequerido(cbuElement)) {
+                    esValido = false;
+                }
+            }
+        }
+    });
     return esValido;
 }
-function limpiarMensajesError(nombre) {
-
+function limpiarMensajesError() {
     document.getElementById("nombreError").textContent = "";
     document.getElementById("apellidoError").textContent = "";
     document.getElementById("emailError").textContent = "";
+    document.getElementById("usuarioError").textContent = "";
+    document.getElementById("passError").textContent = "";
+    document.getElementById("passConfirmarError").textContent = "";
+    document.getElementById("codigoTarjetaError").textContent = "";
+    document.getElementById("numeroTarjetaError").textContent = "";
+    document.getElementById("cuponError").textContent = "";
+    document.getElementById("cbuError").textContent = "";
 }

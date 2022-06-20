@@ -2,20 +2,28 @@ function cargarDatosDefault() {
     localStorage.setItem("nombre", "Fernando");
     localStorage.setItem("apellido", "Icardi");
     localStorage.setItem("email", "email@mail.com");
-    localStorage.setItem("numeroTarjeta", "123456789");
-    localStorage.setItem("codigoTarjeta", "778");
-    localStorage.setItem("cuponPago", "pagoFacil");
+    localStorage.setItem("tarjeta", false);
+    localStorage.setItem("cupon", false);
+    localStorage.setItem("transferencia", true);
+    localStorage.setItem("numeroTarjeta", "");
+    localStorage.setItem("codigoTarjeta", "");
+    localStorage.setItem("rapiPago", false);
+    localStorage.setItem("pagoFacil", false);
     localStorage.setItem("cbu", "18582375763870");
 }
 
-function registrarPerfil(usuario, nombre, apellido, email, numeroTarjeta, codigoTarjeta, cuponPago, cbu) {
+function registrarPerfil(usuario, nombre, apellido, email, tarjeta, cupon, transferencia, numeroTarjeta, codigoTarjeta, rapiPago, pagoFacil, cbu) {
     localStorage.setItem("usuario", usuario);
     localStorage.setItem("nombre", nombre);
     localStorage.setItem("apellido", apellido);
     localStorage.setItem("email", email);
+    localStorage.setItem("tarjeta", tarjeta);
+    localStorage.setItem("cupon", cupon);
+    localStorage.setItem("transferencia", transferencia);
     localStorage.setItem("numeroTarjeta", numeroTarjeta);
     localStorage.setItem("codigoTarjeta", codigoTarjeta);
-    localStorage.setItem("cuponPago", cuponPago);
+    localStorage.setItem("rapiPago", rapiPago);
+    localStorage.setItem("pagoFacil", pagoFacil);
     localStorage.setItem("cbu", cbu);
 }
 
