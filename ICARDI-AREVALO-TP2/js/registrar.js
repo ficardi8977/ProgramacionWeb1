@@ -18,7 +18,6 @@ form.addEventListener('submit', (event) => {
             document.getElementById("cbu").value);
 
     } else {
-        alert("No valido");
         event.preventDefault(); // si no cumple cancela el submit;
     }
 });
