@@ -36,70 +36,84 @@
             </li>
         </ul>
     </nav>
-    <main class="contenedor-perfil">
-        <section>
-            <h3>Nombre de usuario</h3>
-            <img class="imagen-pefil" src="img/imagen-pefil.jpg">
-            <p id = "usuario" style = "color: rgb(39, 142, 233)"></p>
-        </section>
-        <section class="mail-contraseña">
-            <h3>Datos de mail y contraseña</h3>
-            <article class="article-label">
-                <label>Email:</label>
-                <label id= "email" class="label-carga"></label>
-            </article>
-            <article class="article-label">
-                <label>Contraseña:</label>
-                <label class="label-carga">**********</label>
-            </article>
-            <article>
-                <label>Nueva contraseña:</label>
-                <input id="nueva_contraseña" type="text" class="input-text-custom" name="nueva_contraseña" placeholder="nueva contraseña">
-            </article>
-            <article>
-                <label>Repetir contraseña:</label>
-                <input id="repetir_contraseña" type="text" class="input-text-custom" name="repetir_contraseña" placeholder="repetir contraseña">
-            </article>
-        </section>
-        <section>
-            <h3>Metodo de pago</h3>
-            <section class="metodos-pago">
-                <article class="tarjetas">
-                    <input id="tarjeta" type="radio" name="tipoPago" class="radios" value="tarjeta">
-                    <p> Tarjeta de credito</p>
+    <form id="formPerfil" action="index.html" method="get">
+        <main class="contenedor-perfil">
+            <section>
+                <h3>Nombre de usuario</h3>
+                <img class="imagen-pefil" src="img/imagen-pefil.jpg">
+                <p id="usuario" style="color: rgb(39, 142, 233)"></p>
+            </section>
+            <section class="mail-contraseña">
+                <h3>Datos de mail y contraseña</h3>
+                <article class="article-label">
+                    <label>Email:</label>
+                    <label id="email" class="label-carga"></label>
                 </article>
-                <article class="tarjetas">
-                    <input id="numeroTarjeta" type="text" class="input-text-custom" name="tarjeta_numero"
-                        placeholder="numero de tarjeta" pattern="[0-9]{12}">
-                    <input id="codigoTarjeta" type="text" class="input-text-custom-short" name="tarjeta_codigo"
-                        placeholder="xxx" pattern="[0-9]{12}">
+                <article class="article-label">
+                    <label>Contraseña:</label>
+                    <label class="label-carga">**********</label>
+                </article>
+                <article class="linea-form">
+                    <div>
+                        <label>Nueva contraseña:</label>
+                        <input id="pass" type="text" class="input-text-custom" name="pass"
+                            placeholder="nueva contraseña">
+                    </div>
+                    <span id="passError" class="mensajeError">&nbsp</span>
+                </article>
+                <article class="linea-form">
+                    <div>
+                        <label>Repetir contraseña:</label>
+                        <input id="passConfirmar" type="text" class="input-text-custom" name="passConfirmar"
+                            placeholder="repetir contraseña">
+                    </div>
+                    <span id="passConfirmarError" class="mensajeError">&nbsp</span>
                 </article>
             </section>
-            <section class="metodos-pago">
-                <article class="tarjetas">
-                    <input id="cupon" type="radio" name="tipoPago" value="cupon">
-                    <p>Cupon de pago</p>
-                </article>
-                <article class="tarjetas">
-                    <input class="input-pad" id="pagoFacil" type="checkbox" name="pagoFacil" value="pagoFacil"><label
-                        class="label-blanco" for="pagoFacil">pago facil </label>
-                    <input class="input-pad" id="rapiPago" type="checkbox" name="rapiPago" value="rapiPago"><label
-                        class="label-blanco" for="rapiPago">rapi pago</label>
-                </article>
+            <section>
+                <h3>Metodo de pago</h3>
+                <section class="metodos-pago">
+                    <article class="tarjetas">
+                        <input id="tarjeta" type="radio" name="tipoPago" class="radios" value="tarjeta" checked>
+                        <p> Tarjeta de credito</p>
+                    </article>
+                    <article class="linea-form">
+                        <div class="tarjetas">
+                            <input id="numeroTarjeta" type="text" class="input-text-custom" name="tarjeta_numero"
+                                placeholder="numero de tarjeta">
+                            <input id="codigoTarjeta" type="text" class="input-text-custom-short"
+                                name="tarjeta_codigo" placeholder="xxx">
+                        </div>
+                        <span id="numeroTarjetaError" class="mensajeError"></span>
+                        <span id="codigoTarjetaError" class="mensajeError"></span>
+                    </article>
+                </section>
+                <section class="metodos-pago">
+                    <article class="tarjetas">
+                        <input id="cupon" type="radio" name="tipoPago" value="cupon">
+                        <p>Cupon de pago</p>
+                    </article>
+                    <article class="tarjetas">
+                        <input class="input-pad" id="pagoFacil" type="checkbox" name="pagoFacil"
+                            value="pagoFacil"><label class="label-blanco" for="pagoFacil">pago facil </label>
+                        <input class="input-pad" id="rapiPago" type="checkbox" name="rapiPago" value="rapiPago"><label
+                            class="label-blanco" for="rapiPago">rapi pago</label>
+                    </article>
+                </section>
+                <section class="metodos-pago">
+                    <article class="tarjetas">
+                        <input id="transferencia" type="radio" name="tipoPago" value="trasferencia">
+                        <p>Tranferencia bancaria</p>
+                    </article>
+                    <input id="cbu" class="input-text-custom" type="text" name="cbu" placeholder="CBU">
+                </section>
             </section>
-            <section class="metodos-pago">
-                <article class="tarjetas">
-                    <input id="transferencia" type="radio" name="tipoPago" value="trasferencia">
-                    <p>Tranferencia bancaria</p>
-                </article>
-                <input id="cbu" class="input-text-custom" type="text" name="cbu" placeholder="CBU">
-            </section>
+        </main>
+        <section class="accion-registrar">
+            <input id="btnGuardar" type="submit" class="btn-aceptar" value="Guardar" disabled>
+            <a class="btn-cancelar" href="home.html">Cancelar</a></button>
         </section>
-    </main>
-    <section class="accion-registrar">
-        <a class= "btn-aceptar" href="home.html">Guardar</a></button>
-        <a class= "btn-cancelar" href="home.html">Cancelar</a></button>
-    </section>
+    </form>
     <script src=js/perfil.js></script>
     <script src=js/localStorage.js></script>
     <script src=js/validaciones.js></script>
