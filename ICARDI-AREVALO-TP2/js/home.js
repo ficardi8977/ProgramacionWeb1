@@ -33,3 +33,6 @@ document.getElementById("selectorHome").addEventListener('change',(event) => {
         }
     }
 });
+document.getElementById("cerrarSesion").addEventListener('click',(event)=>{
+    limpiarLocalStorage();
+})

@@ -40,12 +40,13 @@
         <section>
             <h3>Nombre de usuario</h3>
             <img class="imagen-pefil" src="img/imagen-pefil.jpg">
+            <p id = "usuario" style = "color: rgb(39, 142, 233)"></p>
         </section>
         <section class="mail-contraseña">
             <h3>Datos de mail y contraseña</h3>
             <article class="article-label">
                 <label>Email:</label>
-                <label class="label-carga">mailusuario@gmail.com</label>
+                <label id= "email" class="label-carga"></label>
             </article>
             <article class="article-label">
                 <label>Contraseña:</label>
@@ -64,34 +65,34 @@
             <h3>Metodo de pago</h3>
             <section class="metodos-pago">
                 <article class="tarjetas">
-                    <input id="tarjeta" type="radio" name="tipo_pago" class="radios" value="tarjeta" checked>
+                    <input id="tarjeta" type="radio" name="tipoPago" class="radios" value="tarjeta">
                     <p> Tarjeta de credito</p>
                 </article>
                 <article class="tarjetas">
-                    <input id="tarjeta_numero" type="text" class="input-text-custom" name="tarjeta_numero"
+                    <input id="numeroTarjeta" type="text" class="input-text-custom" name="tarjeta_numero"
                         placeholder="numero de tarjeta" pattern="[0-9]{12}">
-                    <input id="tarjeta_codigo" type="text" class="input-text-custom-short" name="tarjeta_codigo"
+                    <input id="codigoTarjeta" type="text" class="input-text-custom-short" name="tarjeta_codigo"
                         placeholder="xxx" pattern="[0-9]{12}">
                 </article>
             </section>
             <section class="metodos-pago">
                 <article class="tarjetas">
-                    <input id="cupon" type="radio" name="tipo_pago" value="cupon">
+                    <input id="cupon" type="radio" name="tipoPago" value="cupon">
                     <p>Cupon de pago</p>
                 </article>
                 <article class="tarjetas">
-                    <input class="input-pad" id="pago_facil" type="checkbox" name="pago_facil" value="pago facil"><label
-                        class="label-blanco" for="pago_facil">pago facil </label>
-                    <input class="input-pad" id="rapi_pago" type="checkbox" name="rapi_pago" value="rapi_pago"><label
-                        class="label-blanco" for="rapi_pago">rapi pago</label>
+                    <input class="input-pad" id="pagoFacil" type="checkbox" name="pagoFacil" value="pagoFacil"><label
+                        class="label-blanco" for="pagoFacil">pago facil </label>
+                    <input class="input-pad" id="rapiPago" type="checkbox" name="rapiPago" value="rapiPago"><label
+                        class="label-blanco" for="rapiPago">rapi pago</label>
                 </article>
             </section>
             <section class="metodos-pago">
                 <article class="tarjetas">
-                    <input id="transferencia" type="radio" name="tipo_pago" value="trasferencia">
+                    <input id="transferencia" type="radio" name="tipoPago" value="trasferencia">
                     <p>Tranferencia bancaria</p>
                 </article>
-                <p class="cbu">CBU:18582375763870</p>
+                <input id="cbu" class="input-text-custom" type="text" name="cbu" placeholder="CBU">
             </section>
         </section>
     </main>
@@ -99,6 +100,9 @@
         <a class= "btn-aceptar" href="home.html">Guardar</a></button>
         <a class= "btn-cancelar" href="home.html">Cancelar</a></button>
     </section>
+    <script src=js/perfil.js></script>
+    <script src=js/localStorage.js></script>
+    <script src=js/validaciones.js></script>
 </body>
 
 </html>

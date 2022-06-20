@@ -23,7 +23,7 @@ function registrarPerfil(usuario, nombre, apellido, email, tarjeta, cupon, trans
     localStorage.setItem("numeroTarjeta", numeroTarjeta);
     localStorage.setItem("codigoTarjeta", codigoTarjeta);
     localStorage.setItem("rapiPago", rapiPago);
-    localStorage.setItem("pagoFacil", pagoFacil);
+    localStorage.setItem("pagoFacil",pagoFacil);
     localStorage.setItem("cbu", cbu);
 }
 
@@ -34,4 +34,14 @@ function loginPerfil(usuario) {
 
 function limpiarLocalStorage() {
     localStorage.clear();
+}
+
+function CargarDatoCheckBoxLocalStorage(value){
+    document.getElementById(value).checked =  JSON.parse(localStorage.getItem(value)) === true;
+}
+function CargarDatoInputLocalStorage(value){
+    document.getElementById(value).value = localStorage.getItem(value);
+}
+function CargarDatoLabelLocalStorage(value){
+    document.getElementById(value).textContent = localStorage.getItem(value);
 }
