@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+*{
+    margin:0;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+    background-color: black;
+
+}
+.menu ul li{
+    list-style: none;
+    text-align: center;
+}
+.menu ul li a{
+    color: #fff;
+    display: block;
+    padding:10px;
+    text-decoration: none;
+}
+.menu ul li a:hover{
+    background-color: #fff;
+    color: #06a8de;
+}
+.menu{
+    display: none;
+}
+.menu ul{
+    padding-top: 3em;
+}
+.desplegable{
+    display: block;
+    width: 55px;
+    height: 55px;
+    background-color: url(../img/fondos-movie2.jpg);
+    background-image: url(../img/hamburger.gif);
+    border-radius: 0.5em;
+    position: fixed;
+    left: 0;
+    top:0;
+}
+
+.unflix-title {
+    color: rgb(21, 123, 207);
+    padding-top: 0.5em;
+    width: 4em;
+    font-family: 'Monoton', cursive;
+}
+.logo {
+    width: 50px;
+    height: 50px;
+    align-items: center;
+}
+.container-nav {
+    display: flex;
+    flex-wrap: nowrap;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 100;
+    background-color: rgb(8, 8, 8);
+    background-image: none;
+    border-bottom: rgb(21, 123, 207);
+    border-style: double;
+    flex-direction: row-reverse;
+    padding-bottom: 0.5em;
+}
+
+@media screen and (min-width:48em){
+    .menu{
+        display: block;
+    }
+    .menu ul{
+        display: flex;
+        justify-content: center;
+        padding-top: 0em;
+    }
+
+    .desplegable{
+        display: none;
+    }
+    .container-nav {
+        flex-direction: row;
+        display: flex;
+        flex-wrap: nowrap;
+        position: fixed;
+        top: 0px;
+        width: 100%;
+        z-index: 100;
+        border: none;
+        background-image: url(../img/fondos-movie2.jpg);
+    }
+}

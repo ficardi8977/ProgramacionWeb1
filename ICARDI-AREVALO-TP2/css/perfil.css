@@ -31,3 +31,9 @@
     justify-content: center;
     gap: 1em;
 }
+
+.usuario-perfil
+{
+    color: rgb(39, 142, 233);
+    font-size: large;
+}
