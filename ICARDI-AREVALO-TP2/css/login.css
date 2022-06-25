@@ -1,28 +1,176 @@
-.banner
-{
-    background-color: red;
-    border-style: solid;
-    width: 100%;;
-    height: 300px;
-    background-image: url("../img/banner_02.jpg");
-    background-size: cover;
+*{
+    margin: 0;
 }
+a{
+    color: rgb(212, 212, 212);
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    background-color: black;
+
+}
+h2{
+    color: white;
+    text-align: center;
+}
+.banner{
+    display: flex;
+    flex-wrap: nowrap;
+    top: 0px;
+    width: 100%;
+    background-color: rgb(8, 8, 8);
+    background-image: none;
+    border-bottom: rgb(21, 123, 207);
+    border-style: double;
+    flex-direction: row-reverse;
+    padding-bottom: 0.5em;
+}
+.unflix-title {
+    color: rgb(21, 123, 207);
+    font-family: 'Monoton', cursive;
+    font-size: large;
+    padding-top: 0.5em;
+}
+
 .contenedor-login
 {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
-    background-image: url("../img/fondo-login.jpg");
+    gap: 3em;
 }
+
 .contenedor-datos-login
 {
-    background-color: rgba(0, 0, 0, 0.61);
-    width: 300px;;
-    height: 500px;
     align-items: center;
 }
-h2
-{
+
+.contenedor-sesion{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.container-login{
+    display: flex;
+    flex-direction: column;
     text-align: center;
+    gap: 1em;
+}
+.container-flex-column {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 0.5em;
+}
+.mensajeError {
+    color: rgb(221, 144, 144);
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    align-items: center;
+}
+
+.container-form{
+    display: flex;
+    flex-direction: column;
+    gap:1em
+}
+.input-text-custom {
+    background-color: #333333;
+    border-color: black;
+    color: white;
+    border-radius: 5em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-right: 8em;
+
+}
+.botonera{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1em;
+}
+.btn-aceptar {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    width: 100%;
+    cursor: pointer;
+}
+.btn-aceptar:hover {
+    background-color: #83bb85;
+}
+.btn-aceptar:disabled {
+    background-color: #5e5e5e;
+    cursor: not-allowed
+}
+
+.btn-cancelar {
+    background-color: #e05b5b;
+    border: none;
+    color: white;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    cursor: pointer;
+}
+/* resolucion desktop*/
+@media screen and (min-width:48em){
+    .banner
+    {
+        width: 100%;;
+        height: 300px;
+        border-style: solid;
+        background-image: url("../img/fondo-login.jpg");
+        background-size: cover;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+    }
+    .contenedor-datos-login
+    {
+        background-color: rgba(0, 0, 0, 0.61);
+        width: 300px;;
+        height: 500px;
+        align-items: center;
+    }
+    .unflix-title {
+        border-color: white;
+        color: rgb(21, 123, 207);
+        font-family: 'Monoton', cursive;
+        font-size: 80px;
+        padding-top: 0.5em;
+    }
+    .logo {
+        width: 100px;
+        height: 100px;
+        align-items: center;
+    }
+    .botonera{
+        flex-direction: row;
+        justify-content: center;
+    }
+    .btn-aceptar {
+        width: calc(50%);
+    }
+    .btn-cancelar {
+        width: calc(50%);
+    }
 }

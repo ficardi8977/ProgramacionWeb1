@@ -5,115 +5,113 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/registrar.css">
     <title>Unflix</title>
 </head>
 
-<body class="contenedor-registrar">
+<body class="contenedor-body">
     <header class="banner">
+        <img class="logo" src="img/logo2.png">
+        <h1 class="unflix-title">UnfliX</h1>
     </header>
-    <main class="contenedor-datos-registrar">
-        <section class="container-regitrar">
-            <h2>Registrarse</h2>
-            <form id="FormRegistrar" action="home.html" method="get">
-                <section>
-                    <h3>Datos de usuario</h3>
-
-                    <article class="linea-form">
+    <main class="contenedor-main">
+        <h1> Registrar Usuario</h1>
+        <form class="contenedor-form" id="FormRegistrar">
+            <section class="seccion-datos-formulario">
+            <article class="seccion-datos-usuario">
+                <h2>Datos de usuario</h2>
+                <div class="datos-usuario">
+                    <div class="linea-form">
                         <input class="input-text-custom" type="text" name="nombre" id="nombre" placeholder="Nombre">
                         <span id="nombreError" class="mensajeError">&nbsp</span>
-                    </article>
+                    </div>
 
-                    <article class="linea-form">
+                    <div class="linea-form">
                         <input class="input-text-custom" type="text" name="apellido" id="apellido"
                             placeholder="Apellido">
                         <span id="apellidoError" class="mensajeError">&nbsp</span>
-                    </article>
+                    </div>
 
-                    <article class="linea-form">
+                    <div class="linea-form">
                         <input class="input-text-custom" type="email" name="email" id="email" placeholder="Email">
                         <span id="emailError" class="mensajeError">&nbsp</span>
-                    </article>
+                    </div>
 
-                    <article class="linea-form">
+                    <div class="linea-form">
                         <input class="input-text-custom" type="text" name="usuario" id="usuario"
                             placeholder="Nombre de usuario">
                         <span id="usuarioError" class="mensajeError">&nbsp</span>
-                    </article>
+                    </div>
 
-                    <article class="linea-form">
+                    <div class="linea-form">
                         <input class="input-text-custom" type="password" name="pass" id="pass" placeholder="Contraseña">
                         <span id="passError" class="mensajeError">&nbsp</span>
-                    </article>
+                    </div>
 
-                    <article class="linea-form">
+                    <div class="linea-form">
                         <input class="input-text-custom" type="password" name="pass" id="passConfirmar"
                             placeholder="Repetir contraseña">
                         <span id="passConfirmarError" class="mensajeError">&nbsp</span>
-                    </article>
-
-                </section>
-                <section>
-                    <h3>Metodo de pago</h3>
-                    <section class="metodos-pago">
-                        <article class="tarjetas">
-                            <input id="tarjeta" type="radio" name="tipoPago" class="radios" value="tarjeta" checked>
-                            <p> Tarjeta de credito</p>
-                        </article>
-                        <article class="linea-form">
-                            <div class="tarjetas">
-                                <input id="numeroTarjeta" type="text" class="input-text-custom" name="tarjeta_numero"
-                                    placeholder="numero de tarjeta">
-                                <input id="codigoTarjeta" type="text" class="input-text-custom-short"
-                                    name="tarjeta_codigo" placeholder="xxx">
-                            </div>
-                            <span id="numeroTarjetaError" class="mensajeError"></span>
-                            <span id="codigoTarjetaError" class="mensajeError"></span>
-                        </article>
-                    </section>
-                    <section class="metodos-pago">
-                        <article class="tarjetas">
-                            <input id="cupon" type="radio" name="tipoPago" value="cupon">
-                            <p>Cupon de pago</p>
-                        </article>
-                        <article class="linea-form">
-                            <div class="tarjetas">
-                                <input class="input-pad" id="pagoFacil" type="checkbox" name="cupon"
-                                    value="pago facil"><label class="label-blanco" for="pago_facil">pago facil </label>
-                                <input class="input-pad" id="rapiPago" type="checkbox" name="cupon"
-                                    value="rapi_pago"><label class="label-blanco" for="rapi_pago">rapi pago</label>
-                            </div>
-                            <span id="cuponError" class="mensajeError">&nbsp</span>
-                        </article>
-                    </section>
-                    <section class="linea-form">
-                        <div class="metodos-pago">
-                            <article class="tarjetas">
-                                <input id="transferencia" type="radio" name="tipoPago" value="trasferencia">
-                                <p>Tranferencia bancaria</p>
-                            </article>
-                            <input id="cbu" class="input-text-custom" type="text" name="cbu" placeholder="CBU">
+                    </div>
+                </div>
+            </article>
+            <article class="seccion-metodo-pago">
+                <h2>Metodo de pago</h2>
+                <div class="metodos-pago">
+                    <div class="tarjetas">
+                        <input id="tarjeta" type="radio" name="tipoPago" class="radios" value="tarjeta" checked>
+                        <p> Tarjeta de credito</p>
+                    </div>
+                    <div class="linea-form">
+                        <div class="sub-tarjetas">
+                            <input id="numeroTarjeta" type="text" class="input-text-tarjeta" name="tarjeta_numero"
+                                placeholder="numero de tarjeta">
+                            <input id="codigoTarjeta" type="text" class="input-text-codigo name=" tarjeta_codigo"
+                                placeholder="xxx">
                         </div>
-                        <span id="cbuError" class="mensajeError">&nbsp</span>
-                    </section>
-                </section>
-                <section class="metodos-pago">
-                </section>
-                <section class="accion-registrar">
-                    <input id="btnRegistrar" class="btn-aceptar" type="submit" value="Registrar">
-                    <button class="btn-cancelar"><a href="index.html">Cancelar</a></button>
-                </section>
-            </form>
-        </section>
-
-        </section>
+                        <span id="numeroTarjetaError" class="mensajeError"></span>
+                        <span id="codigoTarjetaError" class="mensajeError"></span>
+                    </div>
+                </div>
+                <div class="metodos-pago">
+                    <div class="tarjetas">
+                        <input id="cupon" type="radio" name="tipoPago" class="radios" value="cupon">
+                        <p>Cupon de pago</p>
+                    </div>
+                    <div class="linea-form">
+                        <div class="sub-tarjetas">
+                            <input class="input-pad" id="pagoFacil" type="checkbox" name="cupon"
+                                value="pago facil"><label class="label-blanco" for="pago_facil">pago facil </label>
+                            <input class="input-pad" id="rapiPago" type="checkbox" name="cupon" value="rapi_pago"><label
+                                class="label-blanco" for="rapi_pago">rapi pago</label>
+                        </div>
+                        <span id="cuponError" class="mensajeError">&nbsp</span>
+                    </div>
+                </div>
+                <div class="metodos-pago">
+                    <div class="tarjetas">
+                        <input id="transferencia" type="radio" name="tipoPago" value="trasferencia">
+                        <p>Tranferencia bancaria</p>
+                    </div>
+                    <div class="sub-tarjetas">
+                        <input id="cbu" class="input-text-custom" type="text" name="cbu" placeholder="CBU">
+                    </div>
+                </div>
+                <span id="cbuError" class="mensajeError">&nbsp</span>
+            </article>
+            </section>
+            <section class="botonera">
+                <input id ="btnRegistrar" type="submit" class="btn-aceptar" value="Registrar" disabled>
+                <input id ="btnCancelar" type="button" class="btn-cancelar" value="Cancelar">
+            </section>
+        </form>
     </main>
     <script src=js/registrar.js></script>
     <script src=js/localStorage.js></script>
     <script src=js/validaciones.js></script>
-
 </body>
 
 </html>

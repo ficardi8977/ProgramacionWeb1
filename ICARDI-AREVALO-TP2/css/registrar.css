@@ -1,61 +1,251 @@
+*{
+    margin: 0;
+}
+a{
+    color: rgb(212, 212, 212);
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    background-color: black;
+}
+h1{
+    color: white;
+    text-align: center;
+}
+h2{
+    color: white;
+}
+p{
+    color: white;
+}
+.contenedor-body{
+    display: flex;
+    flex-direction: column;
+    gap:2em;
+    margin: 0.5em;
+}
+.banner{
+    display: flex;
+    flex-wrap: nowrap;
+    top: 0px;
+    width: 100%;
+    background-color: rgb(8, 8, 8);
+    background-image: none;
+    border-bottom: rgb(21, 123, 207);
+    border-style: double;
+    flex-direction: row-reverse;
+    padding-bottom: 0.5em;
+}
+.unflix-title {
+    color: rgb(21, 123, 207);
+    font-family: 'Monoton', cursive;
+    font-size: large;
+    padding-top: 0.5em;
+}
+.logo {
+    width: 50px;
+    height: 50px;
+    align-items: center;
+}
+.contenedor-form{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+.seccion-datos-formulario{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+.seccion-datos-usuario{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+.seccion-metodo-pago{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
 .metodos-pago
 {
     display: flex;
     flex-direction: column;
-
+    gap: 2em;
 }
-.contenedor-registrar
+
+.linea-form
 {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-    background-image: url("../img/fondo-login.jpg");
+    text-align: left;
 }
-.contenedor-datos-registrar
-{
-    background-color: rgba(0, 0, 0, 0.61);
-    width: 300px;;
-    height: 100%;
-    align-items: center;
+.input-text-custom {
+    background-color: #333333;
+    border-color: black;
+    color: white;
+    border-radius: 5em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    width: calc(90% + 1em);
 }
-.radios
-{
-    text-align: center;
+.input-text-tarjeta {
+    background-color: #333333;
+    border-color: black;
+    color: white;
+    border-radius: 5em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    width: calc(77% + 1em);
+}
+.input-text-codigo {
+    background-color: #333333;
+    border-color: black;
+    color: white;
+    border-radius: 2em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    width: calc(9% + 1em);
+}
+.mensajeError {
+    color: rgb(221, 144, 144);
 }
 .tarjetas
 {
     align-items: center;
     display: flex;
     flex-direction: row;
-}
-.label-blanco
-{
-    color: white;
-}
-.input-pad
-{
-    margin-left: 2em
-}
-.cbu
-{
-    padding-right: 7em;
-}
-
-.accion-registrar
-{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
     gap: 1em;
 }
-h2
+.sub-tarjetas
+{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    padding-left: 1%;
+}
+.radios
 {
     text-align: center;
 }
-.linea-form
-{
+.label-blanco{
+    color: white;
+}
+.contenedor-main{
     display: flex;
     flex-direction: column;
-    text-align: left;
+    gap: 2em;
+}
+.datos-usuario{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.botonera{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1em;
+}
+.btn-aceptar {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    width: 100%;
+    cursor: pointer;
+}
+.btn-aceptar:hover {
+    background-color: #83bb85;
+}
+.btn-aceptar:disabled {
+    background-color: #5e5e5e;
+    cursor: not-allowed
+}
+
+.btn-cancelar {
+    background-color: #e05b5b;
+    border: none;
+    color: white;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    cursor: pointer;
+}
+/* resolucion diferente a mobile*/
+@media screen and (min-width:48em){
+    .banner
+    {
+        width: 100%;;
+        height: 300px;
+        border-style: solid;
+        background-image: url("../img/fondo-login.jpg");
+        background-size: cover;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .unflix-title {
+        border-color: white;
+        color: rgb(21, 123, 207);
+        font-family: 'Monoton', cursive;
+        font-size: 80px;
+        padding-top: 0.5em;
+    }
+    .logo {
+        width: 100px;
+        height: 100px;
+        align-items: center;
+    }
+    .botonera{
+        flex-direction: row;
+        justify-content: center;
+    }
+    .btn-aceptar {
+        width: calc(10%);
+    }
+    .btn-cancelar {
+        width: calc(10%);
+    }
+    .contenedor-form{
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .seccion-datos-usuario{
+        width: calc(40% + 1em );
+    }
+    .seccion-metodo-pago{
+        width: calc(40% + 1em );
+        gap: 2em;
+    }
+    
+    .datos-usuario{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 2.5em;
+    }
+    .linea-form{
+        width: calc(40% + 1em);
+    }
+    .seccion-datos-formulario{
+        flex-direction: row;
+        justify-content: center;
+    }
+    .sub-tarjetas{
+        padding-left: 4%;
+    }
 }

@@ -22,6 +22,11 @@ form.addEventListener('submit', (event) => {
     }
 });
 
+const btnCancelar = document.getElementById('btnCancelar');
+form.addEventListener('click', (event) => {
+    window.location="index.html";
+});
+
 
 document.getElementById("tarjeta").addEventListener('change', (event) => {
     document.getElementById("cbu").value ="";

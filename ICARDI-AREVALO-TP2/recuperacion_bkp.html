@@ -5,19 +5,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/recuperacion.css">
     <title>Unflix</title>
 </head>
 
 <body class="contenedor-login">
     <header class="banner">
-        <img class="logo" src="img/logo2.png">
-        <h1 class="unflix-title">UnfliX</h1>
     </header>
-    <main class="contenedor-sesion">
+    <main class="contenedor-datos-login">
+        <section class="container-login">
+            <article>
                 <h2>Recuperar contraseña</h2>
                 <form id="frmRecuperacion" class="container-form" action="index.html" >
                     <article class ="container-flex-column">
@@ -28,11 +27,13 @@
                         <input id="usuario" class="input-text-custom" name = "email" type="text" placeholder="nombre de usuario">
                         <span id="usuarioError" class="mensajeError">&nbsp</span>
                     </article>
-                    <article class="botonera">
+                    <article class="buttons-columns">
                         <input id ="btnEnviar" type="submit" class="btn-aceptar" value="Enviar mail" disabled>
-                        <input id ="btnCancelar" type="button" class="btn-cancelar" value="Cancelar">
+                        <button class="btn-cancelar"><a href="index.html">Cancelar</a></button>
                     </article>
                 </form>
+            </article>
+        </section>
     </main>
     <script src=js/localStorage.js></script>
     <script src=js/validaciones.js></script>

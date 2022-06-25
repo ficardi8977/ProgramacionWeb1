@@ -5,20 +5,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/login.css">
     <title>Unflix</title>
 </head>
 
 <body class="contenedor-login">
     <header class="banner">
-        <img class="logo" src="img/logo2.png">
-        <h1 class="unflix-title">UnfliX</h1>
     </header>
-    <main class="container-login">
-            <section class="contenedor-sesion">
+    <main class="contenedor-datos-login">
+        <section class="container-login">
+            <article>
                 <h2>Inicia sesión</h2>
                 <form id="frmLogin" class="container-form" action="home.html" method="get">
                     <article class ="container-flex-column" ><input id="usuario" class="input-text-custom" type="text" placeholder="Nombre de usuario">
@@ -30,13 +27,15 @@
                     </article>
                     <article><input class="btn-aceptar" type="submit" value="Iniciar sesión"></article>
                 </form>
-            </section>
-            <section><a href="recuperacion.html">Recuperar contraseña</a></section>
-            <section><a href="registrar.html">Registrarse</a></section>
+            </article>
+            <article><a href="recuperacion.html">Recuperar contraseña</a></article>
+            <article><a href="registrar.html">Registrarse</a></article>
+        </section>
     </main>
-
+    <script src=js/login.js></script>
     <script src=js/localStorage.js></script>
     <script src=js/validaciones.js></script>
-    <script src=js/login.js></script>
+
 </body>
+
 </html>

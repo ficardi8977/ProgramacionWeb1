@@ -173,9 +173,11 @@ article {
     box-sizing: border-box;
     /*esta propiedad hace que el padding no ensanche los anchos*/
 }
-
 .item-pelicula:hover {
     transform: scale(1.02, 1.02)
+}
+img{
+    size-adjust: inherit;
 }
 
 .seccion-destacadas {

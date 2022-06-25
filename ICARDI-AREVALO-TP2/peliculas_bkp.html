@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/main.css">
+  <title>Unflix</title>
+</head>
+
+<body>
+  <nav class="container-nav">
+    <h1 class="unflix-title">UnfliX</h1>
+    <img class="logo" src="img/logo.PNG">
+    <ul class="horizontal">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="series.html">Series</a></li>
+        <li><a href="peliculas.html">Peliculas</a></li>
+        <li><a href="perfil.html">Perfil</a></li>
+      <li>
+        <form class="form-buscador" action="detallePelicula.html" method="get">
+          <select class="input-text-custom" name="categorias">
+            <option value="Default" selected>-Seleccione una categoria-</option>
+            <option value="Accion">Accion</option>
+            <option value="Suspenso">Suspenso</option>
+            <option value="Terror">Terror</option>
+          </select>
+          <input class="input-text-custom" type="search" placeholder="Buscar" id="idBusqueda" name="Busqueda">
+        </form>
+      </li>
+    </ul>
+  </nav>
+  <section class="seccion-destacadas">
+    <h1>Destacadas de la semana</h1>
+    <article class="contenedor-destacadas">
+      <a class="item-destacada" href="detallePelicula.html"><img class="img-destacada" src="img/destacadas/peliDestacada2.jpg"></a>
+      <a class="item-destacada"href="detallePelicula.html"><img class="img-destacada" src="img/destacadas/peliDestacada.jpg"></a>
+    </article>
+  </section>
+  <section class="seccion-peliculas">
+    <h2>Peliculas de acción</h2>
+    <article class="contenedor-pelicula">
+      <a href="detallePelicula.html"><img src="img/peliculas/accion/accion01.jpg" class="item-pelicula"></a>
+      <a href="detallePelicula.html"><img src="img/peliculas/accion/accion02.jpg" class="item-pelicula"></a>
+      <a href="detallePelicula.html"><img src="img/peliculas/accion/accion03.jpg" class="item-pelicula"></a>
+      <a href="detallePelicula.html"><img src="img/peliculas/accion/accion04.jpg" class="item-pelicula"></a>
+      <a href="detallePelicula.html"><img src="img/peliculas/accion/accion05.jpg" class="item-pelicula"></a>
+    </article>
+  </section>
+
+  <section class="seccion-peliculas">
+    <h2>Peliculas de suspenso</h2>
+    <article class="contenedor-pelicula">
+      <a href="detallePelicula.html"><img src="img/peliculas/suspenso/suspenso1.jpg" class="item-pelicula"></a>
+      <a href="detallePelicula.html"><img src="img/peliculas/suspenso/suspenso2.jpg" class="item-pelicula"></a>
+      <a href="detallePelicula.html"><img src="img/peliculas/suspenso/suspenso3.jpg" class="item-pelicula"></a>
+      <a href="detallePelicula.html"><img src="img/peliculas/suspenso/suspenso4.jpg" class="item-pelicula"></a>
+      <a href="detallePelicula.html"><img src="img/peliculas/suspenso/suspenso5.jpg" class="item-pelicula"></a>
+    </article>
+  </section>
+
+  <section class="seccion-peliculas">
+    <h2>Peliculas de Terror</h2>
+    <article class="contenedor-pelicula">
+      <a href="detallePelicula.html"><img src="img/peliculas/terror/terror1.jpg" class="item-pelicula"></a>
+      <a href="detallePelicula.html"><img src="img/peliculas/terror/terror2.jpg" class="item-pelicula"></a>
+      <a href="detallePelicula.html"><img src="img/peliculas/terror/terror3.jpg" class="item-pelicula"></a>
+      <a href="detallePelicula.html"><img src="img/peliculas/terror/terror4.jpg" class="item-pelicula"></a>
+      <a href="detallePelicula.html"><img src="img/peliculas/terror/terror5.jpg" class="item-pelicula"></a>
+    </article>
+  </section>
+
+  <section class="seccion-peliculas">
+    <h2>Peliculas animadas</h2>
+    <article class="contenedor-pelicula">
+      <a href="detallePelicula.html"><img src="img/peliculas/animadas/animada1.jpg" class="item-pelicula"></a>
+      <a href="detallePelicula.html"><img src="img/peliculas/animadas/animada2.jpg" class="item-pelicula"></a>
+      <a href="detallePelicula.html"><img src="img/peliculas/animadas/animada3.jpg" class="item-pelicula"></a>
+      <a href="detallePelicula.html"><img src="img/peliculas/animadas/animada4.jpg" class="item-pelicula"></a>
+      <a href="detallePelicula.html"><img src="img/peliculas/animadas/animada5.jpg" class="item-pelicula"></a>
+    </article>
+  </section>
+</body>
+
+</html>

@@ -7,6 +7,14 @@ body{
     background-color: black;
 
 }
+h1 {
+    font-size: large;
+    color: white;
+}
+h2{
+    color: white;
+}
+
 .menu ul li{
     list-style: none;
     text-align: center;
@@ -39,6 +47,34 @@ body{
     top:0;
 }
 
+.input-text-custom {
+    background-color: #333333;
+    border-color: black;
+    color: white;
+    border-radius: 5em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-right: 8em;
+
+}
+.seccion-filtros{
+    margin-top: 6em;
+    display: flex;
+    flex-direction: column;
+    gap:1em;
+}
+.filtros{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:1em;
+}
+.seccion-destacadas{
+    display: flex;
+    flex-direction: column;
+    gap:1em;
+}
+
 .unflix-title {
     color: rgb(21, 123, 207);
     padding-top: 0.5em;
@@ -64,6 +100,51 @@ body{
     flex-direction: row-reverse;
     padding-bottom: 0.5em;
 }
+.btn-aceptar {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding-right: 5.5em;
+    padding-left: 5.5em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.contenedor-destacadas {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+.item-destacada{
+    width: calc(90% + 1em);
+}
+
+.seccion-peliculas{
+    padding-top: 4%;
+}
+.contenedor-pelicula {
+    padding-top: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+.item-pelicula {
+width: calc(40% + 1em);
+}
+
+img{
+    width: 100%;
+}
 
 @media screen and (min-width:48em){
     .menu{
@@ -88,5 +169,38 @@ body{
         z-index: 100;
         border: none;
         background-image: url(../img/fondos-movie2.jpg);
+    }
+    .filtros{
+        flex-direction: row;  
+    }
+    .input-text-custom{
+        padding: 1em;
+    }
+    .btn-aceptar {
+        padding: 1em;
+    }
+    h1{
+        font-size: xx-large;
+    }
+    .contenedor-destacadas {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-around;                
+    }
+    .item-destacada:hover {
+        transform: scale(1.02, 1.02)
+    }
+    .contenedor-pelicula {
+        flex-wrap: nowrap;
+    }
+
+    .item-pelicula {
+        width: calc(15% + 1em);
+    }
+    .item-pelicula:hover {
+        transform: scale(1.02, 1.02)
+    }
+    .img-destacada{
+        width: 100%;
     }
 }

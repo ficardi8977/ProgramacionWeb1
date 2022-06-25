@@ -11,6 +11,11 @@ form.addEventListener('submit', (event) => {
     }
 });
 
+const btnCancelar = document.getElementById('btnCancelar');
+form.addEventListener('click', (event) => {
+    window.location="index.html"
+    event.src
+});
 
 
 document.getElementById("email").addEventListener('keyup',(event) => {
