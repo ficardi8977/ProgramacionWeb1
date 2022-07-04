@@ -25,7 +25,6 @@ function esLoginValido(usuario, contraseña){
     return esValido;
 }
 
-function limpiarMensajesError() {
-    document.getElementById("usuarioError").textContent = "";
-    document.getElementById("passError").textContent = "";
+function limpiarMensajesError(){
+    $(".mensajeError").empty();
 }

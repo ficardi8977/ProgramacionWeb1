@@ -20,13 +20,13 @@
     <main class="container-login">
             <section class="contenedor-sesion">
                 <h2>Inicia sesión</h2>
-                <form id="frmLogin" class="container-form" action="home.html" method="get">
+                <form id="frmLogin" class="container-form" action="home.html" method="get" action="index.html">
                     <article class ="container-flex-column" ><input id="usuario" class="input-text-custom" type="text" placeholder="Nombre de usuario">
-                        <span id="usuarioError" class="mensajeError">&nbsp</span>
+                        <span id="usuarioError" class="mensajeError"></span>
                     </article>
                     <article class ="container-flex-column">
                         <input id="pass" class="input-text-custom" type="password" placeholder="Contraseña">
-                        <span id="passError" class="mensajeError">&nbsp</span>
+                        <span id="passError" class="mensajeError"></span>
                     </article>
                     <article><input class="btn-aceptar" type="submit" value="Iniciar sesión"></article>
                 </form>
@@ -34,7 +34,7 @@
             <section><a href="recuperacion.html">Recuperar contraseña</a></section>
             <section><a href="registrar.html">Registrarse</a></section>
     </main>
-
+    <script src="js/jquery.min.js"></script>
     <script src=js/localStorage.js></script>
     <script src=js/validaciones.js></script>
     <script src=js/login.js></script>

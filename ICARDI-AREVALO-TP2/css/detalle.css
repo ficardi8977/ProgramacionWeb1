@@ -1,6 +1,73 @@
-body
-{
-    margin-left: 2%;
-    margin-bottom: 2%;
-    margin-right: 2%;
+li{
+    color: white;
+    overflow: hidden;
+}
+label{
+    color: white;
+}
+.seccion-pelicula{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 5em;
+}
+.contenedor-body{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+.info-contenido{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 2em;
+    align-items: center;
+}
+iframe{
+    width: 100%;
+    height: 400px;
+}
+.btn-comenzar {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    width: calc(97%);
+    padding-top: 1em;
+    padding-bottom: 1em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    cursor: pointer;
+}
+.btn-comenzar:hover {
+    background-color: #83bb85;
+}
+.contenedor-capitulos{
+    display: flex;
+    flex-direction: column;
+}
+.flex-caption{
+  width: 96%;
+  padding: 2%;
+  left: 0;
+  bottom: 0;
+  background: rgba(0,0,0,.5);
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0,0,0,.3);
+  font-size: 14px;
+  line-height: 18px;
+}
+
+@media screen and (min-width:48em){
+    .seccion-pelicula{
+        flex-direction: row;
+    }
+    .info-contenido{
+        width: calc(40% + 1em);
+    }
+    .trailer-contenido{
+        width: calc(40% + 1em);
+    }
 }

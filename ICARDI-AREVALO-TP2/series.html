@@ -29,35 +29,48 @@
   <section class="seccion-filtros">
     <form class="form-buscador" action="detallePelicula.html" method="get">
       <article class="filtros">
+        <div id="checkeadores" class="checks">
+          <input type="checkbox" id="checkPelicula" name="check" value="pelicula"  disabled>
+          <label for="checkPelicula">Peliculas</label>
+          <input type="checkbox" id="checkSerie" name="check" value="serie" disabled checked>
+          <label for="checkPelicula">Series</label>
+        </div>
         <select id="selectorHome" class="input-text-custom" name="categorias">
           <option value="0" selected>-Seleccione una categoria-</option>
-          <option value="1">Animadas</option>
-          <option value="2">Epoca</option>
-          <option value="3">Fantasia</option>
-          <option value="4">Terror</option>
+          <option name ="selectorPelicula" value="7" hidden>Accion</option>
+          <option name ="selectorPelicula" value="1" hidden>Animadas</option>
+          <option name ="selectorSerie" value="6">Argentinas</option>
+          <option name ="selectorSerie" value="8">Crimen</option>
+          <option name ="selectorSerie" value="2">Epoca</option>
+          <option name ="selectorSerie" value="3">Fantasia</option>
+          <option name ="selectorPelicula" value="5" hidden>Suspenso</option>
+          <option name ="selectorPelicula" value="4" hidden>Terror</option>
         </select>
         <input class="input-text-custom" type="search" placeholder="Buscar" id="idBusqueda" name="Busqueda">
-        <article><input class="btn-aceptar" type="submit" value="Iniciar sesión"></article>
-      </article>
+        <article class="botonera">
+          <input id="btnLimpiar" class="btn-cancelar" type="button" value="Limpiar">
+          <input id="btnBuscar" class="btn-aceptar" type="button" value="Buscar">
+        </article>
     </form>
   </section>
+  <main id="catalogo">
   <section id="seccionDestacadas" class="seccion-destacadas">
     <h1>Destacadas de la semana</h1>
     <article class="contenedor-destacadas">
-      <a class="item-destacada" href="detallePelicula.html"><img src="img/destacadas/serieDestacada.jpg"></a>
+      <a class="item-destacada" href="detalleSerie.html"><img src="img/destacadas/serieDestacada.jpg"></a>
       <a class="item-destacada" href="detalleSerie.html"><img src="img/destacadas/serieDestacada2.jpg"></a>
     </article>
   </section>
 
-  <section id="seccionFantasia" class="seccion-peliculas">
-    <h2>Series de fantasia</h2>
+  <section id="seccionCrimen" class="seccion-peliculas">
+    <h2>Series de Crimen</h2>
     <article class="contenedor-pelicula">
-      <a href="detalleSerie.html" class="item-pelicula"><img src="img/series/fantasia/fantasia1.jpg"></a>
-      <a href="detalleSerie.html" class="item-pelicula"><img src="img/series/fantasia/fantasia2.jpg"></a>
-      <a href="detalleSerie.html" class="item-pelicula"><img src="img/series/fantasia/fantasia3.jpg"></a>
-      <a href="detalleSerie.html" class="item-pelicula"><img src="img/series/fantasia/fantasia4.jpg"></a>
-      <a href="detalleSerie.html" class="item-pelicula"><img src="img/series/fantasia/fantasia5.jpg"></a>
-      <a href="detalleSerie.html" class="item-pelicula"><img src="img/series/fantasia/fantasia6.jpg"></a>
+      <a href="detalleSerie.html" class="item-pelicula"><img src="img/series/crimen/crimen1.jpg"></a>
+      <a href="detalleSerie.html" class="item-pelicula"><img src="img/series/crimen/crimen2.jpg"></a>
+      <a href="detalleSerie.html" class="item-pelicula"><img src="img/series/crimen/crimen3.jpg"></a>
+      <a href="detalleSerie.html" class="item-pelicula"><img src="img/series/crimen/crimen4.jpg"></a>
+      <a href="detalleSerie.html" class="item-pelicula"><img src="img/series/crimen/crimen5.jpg"></a>
+      <a href="detalleSerie.html" class="item-pelicula"><img src="img/series/crimen/crimen6.jpg"></a>
     </article>
   </section>
 
@@ -73,15 +86,15 @@
     </article>
   </section>
 
-  <section id="seccionAnimadas" class="seccion-peliculas">
-    <h2>Peliculas animadas</h2>
+  <section id="seccionFantasia" class="seccion-peliculas">
+    <h2>Series de fantasia</h2>
     <article class="contenedor-pelicula">
-      <a href="detallePelicula.html" class="item-pelicula"><img src="img/peliculas/animadas/animada1.jpg"></a>
-      <a href="detallePelicula.html" class="item-pelicula"><img src="img/peliculas/animadas/animada2.jpg"></a>
-      <a href="detallePelicula.html" class="item-pelicula"><img src="img/peliculas/animadas/animada3.jpg"></a>
-      <a href="detallePelicula.html" class="item-pelicula"><img src="img/peliculas/animadas/animada4.jpg"></a>
-      <a href="detallePelicula.html" class="item-pelicula"><img src="img/peliculas/animadas/animada5.jpg"></a>
-      <a href="detallePelicula.html" class="item-pelicula"><img src="img/peliculas/animadas/animada6.jpg"></a>
+      <a href="detalleSerie.html" class="item-pelicula"><img src="img/series/fantasia/fantasia1.jpg"></a>
+      <a href="detalleSerie.html" class="item-pelicula"><img src="img/series/fantasia/fantasia2.jpg"></a>
+      <a href="detalleSerie.html" class="item-pelicula"><img src="img/series/fantasia/fantasia3.jpg"></a>
+      <a href="detalleSerie.html" class="item-pelicula"><img src="img/series/fantasia/fantasia4.jpg"></a>
+      <a href="detalleSerie.html" class="item-pelicula"><img src="img/series/fantasia/fantasia5.jpg"></a>
+      <a href="detalleSerie.html" class="item-pelicula"><img src="img/series/fantasia/fantasia6.jpg"></a>
     </article>
   </section>
 
@@ -96,9 +109,11 @@
       <a href="detalleSerie.html" class="item-pelicula"><img src="img/series/argentinas/argentina6.jpg"></a>
     </article>
   </section>
+</main>
   <script src=js/home.js></script>
   <script src="js/menu.js"></script>
   <script src=js/localStorage.js></script>
   <script src=js/validaciones.js></script>
+  <script src=js/catalogo.js></script>
 </body>
 </html>

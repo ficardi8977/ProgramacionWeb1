@@ -27,6 +27,17 @@ function registrarPerfil(usuario, nombre, apellido, email, tarjeta, cupon, trans
     localStorage.setItem("cbu", cbu);
 }
 
+function modificacionPerfil(tarjeta, cupon, transferencia, numeroTarjeta, codigoTarjeta, rapiPago, pagoFacil, cbu){
+    localStorage.setItem("tarjeta", tarjeta);
+    localStorage.setItem("cupon", cupon);
+    localStorage.setItem("transferencia", transferencia);
+    localStorage.setItem("numeroTarjeta", numeroTarjeta);
+    localStorage.setItem("codigoTarjeta", codigoTarjeta);
+    localStorage.setItem("rapiPago", rapiPago);
+    localStorage.setItem("pagoFacil",pagoFacil);
+    localStorage.setItem("cbu", cbu);
+}
+
 function loginPerfil(usuario) {
     localStorage.setItem("usuario", usuario);
     cargarDatosDefault();

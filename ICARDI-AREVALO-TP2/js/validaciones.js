@@ -47,7 +47,7 @@ function validarContraseña(nombre){
     let regex = /(?=.*[0-9].*[0-9])(?=.*[A-Za-z].*[A-Za-z])(?=.*[!@#$&*].*[!@#$&*])/gm; 
     if (!regex.test(nombre.value)) {
         let mensajeError = document.getElementById(nombre.id + "Error");
-        mensajeError.textContent = "Debe contener un minimo de 2 letas, 2 numeros y 2 caracteres especiales";
+        mensajeError.textContent = "Debe tener al menos 2 letras, 2 numeros y 2 caracteres especiales";
         nombre.focus();
         esValido = false;
     }
@@ -89,7 +89,7 @@ function validarNumeroTarjeta(numero){
     let regex =/^\D*\d{16,19}$/;
 
     if (!regex.test(numero.value)) {
-        mensajeError.textContent = "El número de tarjeta debe ser unicamente numeros entre 16 y 19 digitos";
+        mensajeError.textContent = "Solo numeros entre 16 y 19 digitos";
         numero.focus();
         esValido = false;
     } else{
@@ -99,13 +99,13 @@ function validarNumeroTarjeta(numero){
         }
         let ultimoNumero = numero.value[numero.value.length-1];
         if(esPar(sumaDeNumeros) && esPar(ultimoNumero)){
-            mensajeError.textContent = "La suma de numeros de tarjeta es par. El ultimo numero debe es impar";
+            mensajeError.textContent = "La suma del nro tarjeta es par. El ultimo debe es impar";
             numero.focus();
             esValido = false;    
         }
         else{
             if(!esPar(sumaDeNumeros) && !esPar(ultimoNumero)){
-                mensajeError.textContent = "La suma de numeros de tarjeta es impar. El ultimo numero debe es par";
+                mensajeError.textContent = "La suma del nro tarjeta es impar. El ultimo debe es par";
                 numero.focus();
                 esValido = false;        
             }

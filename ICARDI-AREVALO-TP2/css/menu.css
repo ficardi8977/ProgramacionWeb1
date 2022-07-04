@@ -54,7 +54,7 @@ h2{
     border-radius: 5em;
     padding-top: 1em;
     padding-bottom: 1em;
-    padding-right: 8em;
+    width: calc(90% + 1em);
 
 }
 .seccion-filtros{
@@ -114,7 +114,20 @@ h2{
     font-size: 1em;
     cursor: pointer;
 }
-
+.btn-cancelar {
+    background-color: #e05b5b;
+    border: none;
+    color: white;
+    padding-right: 5.5em;
+    padding-left: 5.5em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    cursor: pointer;
+}
 .contenedor-destacadas {
     display: flex;
     flex-direction: column;
@@ -141,11 +154,25 @@ h2{
 .item-pelicula {
 width: calc(40% + 1em);
 }
+.botonera{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1em;
+}
 
 img{
     width: 100%;
 }
-
+label{
+    color:white;
+}
+.checks{
+    display: flex;
+    flex-direction: row;
+    gap:0.5em;
+}
 @media screen and (min-width:48em){
     .menu{
         display: block;
@@ -179,6 +206,9 @@ img{
     .btn-aceptar {
         padding: 1em;
     }
+    .btn-cancelar {
+        padding: 1em;
+    }
     h1{
         font-size: xx-large;
     }
@@ -191,16 +221,26 @@ img{
         transform: scale(1.02, 1.02)
     }
     .contenedor-pelicula {
-        flex-wrap: nowrap;
+        padding-left: 1em;
+        justify-content: flex-start;
+        flex-wrap: wrap;
     }
 
     .item-pelicula {
-        width: calc(15% + 1em);
+        width: calc(12% + 1em);
     }
     .item-pelicula:hover {
         transform: scale(1.02, 1.02)
     }
     .img-destacada{
         width: 100%;
+    }
+    .botonera{
+        flex-direction: row;
+    }
+}
+@media screen and (min-width:72em){
+    .item-pelicula {
+        width: calc(14% + 1em);
     }
 }

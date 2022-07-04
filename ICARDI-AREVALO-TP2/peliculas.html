@@ -29,17 +29,31 @@
   <section class="seccion-filtros">
     <form class="form-buscador" action="detallePelicula.html" method="get">
       <article class="filtros">
+        <div id="checkeadores" class="checks">
+          <input type="checkbox" id="checkPelicula" name="check" value="pelicula"  disabled checked>
+          <label for="checkPelicula">Peliculas</label>
+          <input type="checkbox" id="checkSerie" name="check" value="serie" disabled>
+          <label for="checkPelicula">Series</label>
+        </div>
         <select id="selectorHome" class="input-text-custom" name="categorias">
-            <option value="Default" selected>-Seleccione una categoria-</option>
-            <option value="Accion">Accion</option>
-            <option value="Suspenso">Suspenso</option>
-            <option value="Terror">Terror</option>
+          <option value="0" selected>-Seleccione una categoria-</option>
+          <option name ="selectorPelicula" value="7">Accion</option>
+          <option name ="selectorPelicula" value="1">Animadas</option>
+          <option name ="selectorSerie" value="6" hidden>Argentinas</option>
+          <option name ="selectorSerie" value="8" hidden>Crimen</option>
+          <option name ="selectorSerie" value="2" hidden>Epoca</option>
+          <option name ="selectorSerie" value="3" hidden>Fantasia</option>
+          <option name ="selectorPelicula" value="5">Suspenso</option>
+          <option name ="selectorPelicula" value="4">Terror</option>
         </select>
         <input class="input-text-custom" type="search" placeholder="Buscar" id="idBusqueda" name="Busqueda">
-        <article><input class="btn-aceptar" type="submit" value="Iniciar sesión"></article>
-      </article>
+        <article class="botonera">
+          <input id="btnLimpiar" class="btn-cancelar" type="button" value="Limpiar">
+          <input id="btnBuscar" class="btn-aceptar" type="button" value="Buscar">
+        </article>
     </form>
   </section>
+  <main id="catalogo">
   <section id="seccionDestacadas" class="seccion-destacadas">
     <h1>Destacadas de la semana</h1>
     <article class="contenedor-destacadas">
@@ -60,7 +74,7 @@
     </article>
   </section>
 
-  <section id="seccionEpoca" class="seccion-peliculas">
+  <section id="seccionSuspenso" class="seccion-peliculas">
     <h2>Peliculas de suspenso</h2>
     <article class="contenedor-pelicula">
       <a href="detallePelicula.html" class="item-pelicula"><img src="img/peliculas/suspenso/suspenso1.jpg"></a>
@@ -85,17 +99,7 @@
       </article>
     </article>
   </section>
-  <section id="seccionAnmiadas" class="seccion-peliculas">
-    <h2>Peliculas animadas</h2>
-    <article class="contenedor-pelicula">
-      <a href="detalleSerie.html" class="item-pelicula"><img src="img/series/fantasia/fantasia1.jpg"></a>
-      <a href="detalleSerie.html" class="item-pelicula"><img src="img/series/fantasia/fantasia2.jpg"></a>
-      <a href="detalleSerie.html" class="item-pelicula"><img src="img/series/fantasia/fantasia3.jpg"></a>
-      <a href="detalleSerie.html" class="item-pelicula"><img src="img/series/fantasia/fantasia4.jpg"></a>
-      <a href="detalleSerie.html" class="item-pelicula"><img src="img/series/fantasia/fantasia5.jpg"></a>
-      <a href="detalleSerie.html" class="item-pelicula"><img src="img/series/fantasia/fantasia6.jpg"></a>
-    </article>
-  </section>
+  
   <section id="seccionAnimadas" class="seccion-peliculas">
     <h2>Peliculas animadas</h2>
     <article class="contenedor-pelicula">
@@ -107,10 +111,12 @@
       <a href="detallePelicula.html" class="item-pelicula"><img src="img/peliculas/animadas/animada6.jpg"></a>
     </article>
   </section>
+  </main>
   <script src=js/home.js></script>
   <script src="js/menu.js"></script>
   <script src=js/localStorage.js></script>
   <script src=js/validaciones.js></script>
+  <script src=js/catalogo.js></script>
 </body>
 
 </html>

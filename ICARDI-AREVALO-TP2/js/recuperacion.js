@@ -11,13 +11,6 @@ form.addEventListener('submit', (event) => {
     }
 });
 
-const btnCancelar = document.getElementById('btnCancelar');
-form.addEventListener('click', (event) => {
-    window.location="index.html"
-    event.src
-});
-
-
 document.getElementById("email").addEventListener('keyup',(event) => {
     cambiarEstadoBtnEnviar( document.getElementById("email"), document.getElementById("usuario"))
 }
@@ -26,6 +19,10 @@ document.getElementById("usuario").addEventListener('keyup',(event) => {
     cambiarEstadoBtnEnviar( document.getElementById("email"), document.getElementById("usuario"))
 }
 );
+
+$("#btnCancelar").click(function() {
+    window.location = "index.html";
+});
 /////////////////////////////////////////////////////////////////////
 /// funciones ///////////////////////////////////////////////////////
 function esRecuperacionValido(emailElement, usuarioElement){
@@ -50,6 +47,5 @@ function cambiarEstadoBtnEnviar(emailElement, usuarioElement){
     }
 }
 function limpiarMensajesError(){
-    document.getElementById("emailError").textContent =  " ";
-    document.getElementById("usuarioError").textContent = " ";
+    $(".mensajeError").empty();
 }

@@ -72,14 +72,19 @@ p{
 {
     display: flex;
     flex-direction: column;
-    gap: 2em;
+    gap: 0.5em;
+}
+.tarjeta{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
 }
 
 .linea-form
 {
     display: flex;
     flex-direction: column;
-    text-align: left;
+    align-items: center;
 }
 .input-text-custom {
     background-color: #333333;
@@ -88,8 +93,13 @@ p{
     border-radius: 5em;
     padding-top: 1em;
     padding-bottom: 1em;
-    width: calc(90% + 1em);
+    width: calc(60% + 1em);
 }
+
+.input-text-custom:disabled{
+    cursor: not-allowed;
+}
+
 .input-text-tarjeta {
     background-color: #333333;
     border-color: black;
@@ -97,7 +107,10 @@ p{
     border-radius: 5em;
     padding-top: 1em;
     padding-bottom: 1em;
-    width: calc(77% + 1em);
+    width: calc(73% + 1em);
+}
+.input-text-tarjeta:disabled{
+    cursor: not-allowed;
 }
 .input-text-codigo {
     background-color: #333333;
@@ -108,6 +121,9 @@ p{
     padding-bottom: 1em;
     width: calc(9% + 1em);
 }
+.input-text-codigo:disabled{
+    cursor: not-allowed;
+}
 .mensajeError {
     color: rgb(221, 144, 144);
 }
@@ -117,6 +133,7 @@ p{
     display: flex;
     flex-direction: row;
     gap: 1em;
+    padding-left: 8%;
 }
 .sub-tarjetas
 {
@@ -141,7 +158,7 @@ p{
 .datos-usuario{
     display: flex;
     flex-direction: column;
-    gap: 1em;
+    gap: 0.5em;
 }
 .botonera{
     display: flex;
@@ -228,24 +245,22 @@ p{
         width: calc(40% + 1em );
     }
     .seccion-metodo-pago{
-        width: calc(40% + 1em );
+        width: calc(50% + 1em );
         gap: 2em;
     }
-    
-    .datos-usuario{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 2.5em;
-    }
-    .linea-form{
-        width: calc(40% + 1em);
-    }
+
     .seccion-datos-formulario{
         flex-direction: row;
         justify-content: center;
     }
     .sub-tarjetas{
         padding-left: 4%;
+    }
+    .linea-form
+    {
+        align-items:flex-start ;
+    }
+    .tarjetas{
+        padding-left: 0%;
     }
 }

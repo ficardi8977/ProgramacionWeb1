@@ -1,128 +1,164 @@
-/////// EVENTOS ////////////////////////////////////////////////////////
-const form = document.getElementById('FormRegistrar');
+let nombreValido = false;
+let apellidoValido = false;
+let usuarioValido = false;
+let emaiValido = false;
+let passValido = false;
+let passConfirmarValido = false;
+let medioPagoValido = false;
 
-form.addEventListener('submit', (event) => {
-    if (validacionesFormulario()) {
-        registrarPerfil(
-            document.getElementById("usuario").value, 
-            document.getElementById("nombre").value, 
-            document.getElementById("apellido").value, 
-            document.getElementById("email").value, 
-            document.getElementById("tarjeta").checked, 
-            document.getElementById("cupon").checked, 
-            document.getElementById("transferencia").checked, 
-            document.getElementById("numeroTarjeta").value, 
-            document.getElementById("codigoTarjeta").value, 
-            document.getElementById("rapiPago").checked,
-            document.getElementById("pagoFacil").checked,
-            document.getElementById("cbu").value);
+$('#numeroTarjeta').prop('disabled', false);
+$('#codigoTarjeta').prop('disabled', false);
+$('#cbu').prop('disabled', true);
+$('#pagoFacil').prop('checked', false);
+$('#rapiPago').prop('checked', false);
+$('#pagoFacil').prop('disabled', true);
+$('#rapiPago').prop('disabled', true);
 
+
+
+$("#nombre").keyup(function () {
+    if (!validarRequerido(this) || !validarSoloCaracter(this)) {
+        nombreValido = false;
     } else {
-        event.preventDefault(); // si no cumple cancela el submit;
+        nombreValido = true;
+        $("#nombreError").text('\xA0');
     }
 });
 
-const btnCancelar = document.getElementById('btnCancelar');
-form.addEventListener('click', (event) => {
-    window.location="index.html";
+$("#apellido").keyup(function () {
+    if (!validarRequerido(this) || !validarSoloCaracter(this)) {
+        apellidoValido = false;
+    } else {
+        apellidoValido = true;
+        $("#apellidoError").text('\xA0');
+    }
 });
 
-
-document.getElementById("tarjeta").addEventListener('change', (event) => {
-    document.getElementById("cbu").value ="";
-    document.getElementById("rapiPago").checked =false;
-    document.getElementById("pagoFacil").checked =false;
-});
-document.getElementById("cupon").addEventListener('change', (event) => {
-    document.getElementById("numeroTarjeta").value ="";
-    document.getElementById("codigoTarjeta").value ="";
-    document.getElementById("cbu").value ="";
-
-});
-document.getElementById("transferencia").addEventListener('change', (event) => {
-    document.getElementById("numeroTarjeta").value ="";
-    document.getElementById("codigoTarjeta").value ="";
-    document.getElementById("rapiPago").checked =false;
-    document.getElementById("pagoFacil").checked =false;
+$("#email").keyup(function () {
+    if (!validarRequerido(this) || !validarMail(this)) {
+        emaiValido = false;
+    } else {
+        emaiValido = true;
+        $("#emailError").text('\xA0');
+    }
 });
 
-//////////////////////////////////////////////////////////////////////////////////////////
-/////// FUNCIONES  ///////////////////////////////////////////////////////////////////////
+$("#usuario").keyup(function () {
+    if (!validarRequerido(this) || !validarSoloLetrasYNumeros(this)) {
+        usuarioValido = false;
+    } else {
+        usuarioValido = true
+        $("#usuarioError").text('\xA0');
+    }
+});
 
-function validacionesFormulario() {
-    limpiarMensajesError();
-    let esValido = true;
-    let nombreElement = document.getElementById("nombre");
-    if (!validarRequerido(nombreElement) || !validarSoloCaracter(nombreElement)) {
-        esValido = false;
+$("#pass").keyup(function () {
+    if (!validarRequerido(this) || !validarContraseña(this)) {
+        passValido = false;
+    } else {
+        passValido = true;
+        $("#passError").text('\xA0');
     }
-    let apellidoElement = document.getElementById("apellido");
-    if (!validarRequerido(apellidoElement) || !validarSoloCaracter(apellidoElement)) {
-        esValido = false;
-    }
-    let emailElement = document.getElementById("email");
-    if (!validarRequerido(emailElement) || !validarMail(emailElement)) {
-        esValido = false;
-    }
-    let usuarioElement = document.getElementById("usuario");
-    if (!validarRequerido(usuarioElement) || !validarSoloLetrasYNumeros(usuarioElement)) {
-        esValido = false;
-    }
-    let passElement = document.getElementById("pass");
-    if (!validarRequerido(passElement) || !validarContraseña(passElement)) {
-        esValido = false;
-    }
-    let passConfirmarElement = document.getElementById("passConfirmar");
-    if (!validarRequerido(passConfirmarElement) || !validarIgual(passConfirmarElement, passElement)) {
-        esValido = false;
-    }
+});
 
-    let tiposPago = document.getElementsByName("tipoPago");
-    tiposPago.forEach((element) => {
-        if (element.checked) {
-            if (element.id == "cupon") {
-                let cupon = document.getElementsByName("cupon");
-                if (!validarCheckeado(cupon, 'cupon')) {
-                    esValido = false;
-                }
-            }
-            if (element.id == "tarjeta") {
-                let codigoTarjetaElement = document.getElementById("codigoTarjeta");
-                if (!validarRequerido(codigoTarjetaElement) || !validarNumerosCodigoTarjeta(codigoTarjetaElement)) {
-                    esValido = false;
-                }
-                let numeroTarjetaElement = document.getElementById("numeroTarjeta");
-                if (!validarRequerido(numeroTarjetaElement) || !validarNumeroTarjeta(numeroTarjetaElement)) {
-                    esValido = false;
-                }
-                let errorCodigo = document.getElementById(codigoTarjetaElement.id + "Error").textContent;
-                let errorNumero = document.getElementById(numeroTarjetaElement.id + "Error").textContent;
-                if (errorCodigo != "") {
-                    document.getElementById(codigoTarjetaElement.id + "Error").textContent = "Código de tarjeta : " + errorCodigo;
-                } if (errorNumero != "") {
-                    document.getElementById(numeroTarjetaElement.id + "Error").textContent = "Número de tarjeta : " + errorNumero;
-                }
+$("#passConfirmar").keyup(function () {
+    if (!validarRequerido(this) || !validarIgual(this, document.getElementById("pass"))) {
+        passConfirmarValido = false;
+    } else {
+        passConfirmarValido = true;
+        $("#passConfirmarError").text('\xA0');
+    }
+});
 
-            }
-            if (element.id == "transferencia") {
-                let cbuElement = document.getElementById("cbu");
-                if (!validarSoloNumeros(cbuElement) && !validarRequerido(cbuElement)) {
-                    esValido = false;
-                }
-            }
+$("#numeroTarjeta").keyup(function () {
+    if ($('#tarjeta').is(':checked')) {
+        if (!validarRequerido(this) || !validarNumeroTarjeta(this)) {
+            numeroTarjetaValido = false;
+        } else {
+            numeroTarjetaValido = true;
+            $("#numeroTarjetaError").text('\xA0');
         }
-    });
-    return esValido;
-}
-function limpiarMensajesError() {
-    document.getElementById("nombreError").textContent = "";
-    document.getElementById("apellidoError").textContent = "";
-    document.getElementById("emailError").textContent = "";
-    document.getElementById("usuarioError").textContent = "";
-    document.getElementById("passError").textContent = "";
-    document.getElementById("passConfirmarError").textContent = "";
-    document.getElementById("codigoTarjetaError").textContent = "";
-    document.getElementById("numeroTarjetaError").textContent = "";
-    document.getElementById("cuponError").textContent = "";
-    document.getElementById("cbuError").textContent = "";
-}
+        medioPagoValido = (numeroTarjetaValido && codigoTarjetaValido);
+    }
+});
+
+$("#codigoTarjeta").keyup(function () {
+    if ($('#tarjeta').is(':checked')) {
+        if (!validarRequerido(this) || !validarNumerosCodigoTarjeta(this)) {
+            codigoTarjetaValido = false;
+        }
+        else {
+            codigoTarjetaValido = true;
+            $("#codigoTarjetaError").text('\xA0');
+        }
+        medioPagoValido = (numeroTarjetaValido && codigoTarjetaValido);
+    }
+});
+
+$("#cbu").keyup(function () {
+
+    if ($('#transferencia').is(':checked')) {
+        if (!validarSoloNumeros(this) || !validarRequerido(this)) {
+            medioPagoValido = false;
+        } else {
+            medioPagoValido = true;
+            $("#cbuError").text('\xA0');
+        }
+    }
+});
+
+$('input[name="cupon"]').change(function () {
+    debugger;
+    if (!$('input[name="cupon"]').is(':checked')){
+        medioPagoValido = false;
+        $("#cuponError").text("Debe seleccionarse al menos un cupon de pago");
+    } else {
+        medioPagoValido = true;
+        $("#cuponError").text('\xA0');
+    }
+});
+$('input[name="tipoPago"]').change(function () {
+
+    if ($('#cupon').is(':checked')) {
+        if (!$('input[name="cupon"]').is('checked')) {
+            $('#pagoFacil').prop('checked', true);
+            $('#pagoFacil').prop('disabled', false);
+            $('#rapiPago').prop('disabled', false);
+            $('#cbu').prop('disabled', true);
+            $('#numeroTarjeta').prop('disabled', true);
+            $('#codigoTarjeta').prop('disabled', true);
+            medioPagoValido = true;
+        }
+    }else{
+        $('#pagoFacil').prop('checked', false);
+        $('#rapiPago').prop('checked', false);
+        $('#pagoFacil').prop('disabled', true);
+        $('#rapiPago').prop('disabled', true);
+
+        if($('#tarjeta').is(':checked')){
+            $('#numeroTarjeta').prop('disabled', false);
+            $('#codigoTarjeta').prop('disabled', false);
+            $('#cbu').prop('disabled', true);
+        }else{
+            $('#cbu').prop('disabled', false);
+            $('#numeroTarjeta').prop('disabled', true);
+            $('#codigoTarjeta').prop('disabled', true);
+        }
+
+    } 
+        $("#numeroTarjeta").val("");
+        $("#codigoTarjeta").val("");
+        $("#cbu").val("");
+        $('#cbuError').text('\xA0');
+        $('#numeroTarjetaError').text('\xA0');
+        $('#codigoTarjetaError').text('\xA0');
+        $('#cuponError').text('\xA0');    
+});
+
+$("#FormRegistrar").change(function () {
+    if (nombreValido && apellidoValido && emaiValido && usuarioValido && passValido && passConfirmarValido && medioPagoValido) {
+        $('#btnRegistrar').prop('disabled', false);
+    } else {
+        $('#btnRegistrar').prop('disabled', true);
+    }
+});

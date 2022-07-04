@@ -19,14 +19,14 @@
     </header>
     <main class="contenedor-sesion">
                 <h2>Recuperar contraseña</h2>
-                <form id="frmRecuperacion" class="container-form" action="index.html" >
+                <form id="frmRecuperacion" class="container-form" action="index.html" method="get" >
                     <article class ="container-flex-column">
                         <input id="email" class="input-text-custom" name="email" type="text" placeholder="Email">
-                        <span id="emailError" class="mensajeError">&nbsp</span>
+                        <span id="emailError" class="mensajeError"></span>
                     </article>
                     <article class ="container-flex-column">
                         <input id="usuario" class="input-text-custom" name = "email" type="text" placeholder="nombre de usuario">
-                        <span id="usuarioError" class="mensajeError">&nbsp</span>
+                        <span id="usuarioError" class="mensajeError"></span>
                     </article>
                     <article class="botonera">
                         <input id ="btnEnviar" type="submit" class="btn-aceptar" value="Enviar mail" disabled>
@@ -34,6 +34,7 @@
                     </article>
                 </form>
     </main>
+    <script src="js/jquery.min.js"></script>
     <script src=js/localStorage.js></script>
     <script src=js/validaciones.js></script>
     <script src=js/recuperacion.js></script>

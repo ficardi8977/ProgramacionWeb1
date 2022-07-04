@@ -19,7 +19,7 @@
     </header>
     <main class="contenedor-main">
         <h1> Registrar Usuario</h1>
-        <form class="contenedor-form" id="FormRegistrar">
+        <form class="contenedor-form" id="FormRegistrar" method="get" action="index.html" >
             <section class="seccion-datos-formulario">
             <article class="seccion-datos-usuario">
                 <h2>Datos de usuario</h2>
@@ -72,8 +72,8 @@
                             <input id="codigoTarjeta" type="text" class="input-text-codigo name=" tarjeta_codigo"
                                 placeholder="xxx">
                         </div>
-                        <span id="numeroTarjetaError" class="mensajeError"></span>
-                        <span id="codigoTarjetaError" class="mensajeError"></span>
+                        <span id="numeroTarjetaError" class="mensajeError">&nbsp</span>
+                        <span id="codigoTarjetaError" class="mensajeError">&nbsp</span>
                     </div>
                 </div>
                 <div class="metodos-pago">
@@ -96,11 +96,11 @@
                         <input id="transferencia" type="radio" name="tipoPago" value="trasferencia">
                         <p>Tranferencia bancaria</p>
                     </div>
-                    <div class="sub-tarjetas">
+                    <div class="linea-form">
                         <input id="cbu" class="input-text-custom" type="text" name="cbu" placeholder="CBU">
+                        <span id="cbuError" class="mensajeError">&nbsp</span>
                     </div>
                 </div>
-                <span id="cbuError" class="mensajeError">&nbsp</span>
             </article>
             </section>
             <section class="botonera">
@@ -109,6 +109,7 @@
             </section>
         </form>
     </main>
+    <script src="js/jquery.min.js"></script>
     <script src=js/registrar.js></script>
     <script src=js/localStorage.js></script>
     <script src=js/validaciones.js></script>

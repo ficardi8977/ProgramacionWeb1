@@ -8,9 +8,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="js/jquery.min.js"></script>
   <link rel="stylesheet" href="css/menu.css">
 </head>
+
 <body>
   <section class="container-nav">
     <img class="logo" src="img/logo2.png">
@@ -29,76 +30,143 @@
   <section class="seccion-filtros">
     <form class="form-buscador" action="detallePelicula.html" method="get">
       <article class="filtros">
+        <div id="checkeadores" class="checks">
+          <input type="checkbox" id="checkPelicula" name="check" value="pelicula" checked>
+          <label for="checkPelicula">Peliculas</label>
+          <input type="checkbox" id="checkSerie" name="check" value="serie" checked>
+          <label for="checkPelicula">Series</label>
+        </div>
         <select id="selectorHome" class="input-text-custom" name="categorias">
           <option value="0" selected>-Seleccione una categoria-</option>
-          <option value="1">Animadas</option>
-          <option value="2">Epoca</option>
-          <option value="3">Fantasia</option>
-          <option value="4">Terror</option>
+          <option name ="selectorPelicula" value="7">Accion</option>
+          <option name ="selectorPelicula" value="1">Animadas</option>
+          <option name ="selectorSerie" value="6">Argentinas</option>
+          <option name ="selectorSerie" value="8">Crimen</option>
+          <option name ="selectorSerie" value="2">Epoca</option>
+          <option name ="selectorSerie" value="3">Fantasia</option>
+          <option name ="selectorPelicula" value="5">Suspenso</option>
+          <option name ="selectorPelicula" value="4">Terror</option>
         </select>
         <input class="input-text-custom" type="search" placeholder="Buscar" id="idBusqueda" name="Busqueda">
-        <article><input class="btn-aceptar" type="submit" value="Iniciar sesión"></article>
+        <article class="botonera">
+          <input id="btnLimpiar" class="btn-cancelar" type="button" value="Limpiar">
+          <input id="btnBuscar" class="btn-aceptar" type="button" value="Buscar">
+        </article>
       </article>
     </form>
   </section>
-  <section id="seccionDestacadas" class="seccion-destacadas">
-    <h1>Destacadas de la semana</h1>
-    <article class="contenedor-destacadas">
-      <a class="item-destacada" href="detallePelicula.html"><img src="img/destacadas/peliDestacada.jpg"></a>
-      <a class="item-destacada" href="detalleSerie.html"><img src="img/destacadas/serieDestacada.jpg"></a>
-    </article>
-  </section>
+  <main id="catalogo">
+    <section id="seccionDestacadas" class="seccion-destacadas">
+      <h1>Destacadas de la semana</h1>
+      <article class="contenedor-destacadas">
+        <a class="item-destacada" id="juego de ladrones" href="detallePelicula.html"><img
+            src="img/destacadas/peliDestacada.jpg"></a>
+        <a class="item-destacada" id="the walking dead" href="detalleSerie.html"><img
+            src="img/destacadas/serieDestacada.jpg"></a>
+      </article>
+    </section>
 
-  <section id="seccionTerror" class="seccion-peliculas">
-    <h2>Peliculas de Terror</h2>
-    <article class="contenedor-pelicula">
-      <a href="detallePelicula.html" class="item-pelicula"><img src="img/peliculas/terror/terror1.jpg"></a>
-      <a href="detallePelicula.html" class="item-pelicula"><img src="img/peliculas/terror/terror2.jpg"></a>
-      <a href="detallePelicula.html" class="item-pelicula"><img src="img/peliculas/terror/terror3.jpg"></a>
-      <a href="detallePelicula.html" class="item-pelicula"><img src="img/peliculas/terror/terror4.jpg"></a>
-      <a href="detallePelicula.html" class="item-pelicula"><img src="img/peliculas/terror/terror5.jpg"></a>
-      <a href="detallePelicula.html" class="item-pelicula"><img src="img/peliculas/terror/terror6.jpg"></a>
-    </article>
-  </section>
+    <section id="seccionTerror" class="seccion-peliculas">
+      <h2>Peliculas de Terror</h2>
+      <article class="contenedor-pelicula">
+        <a href="detallePelicula.html" id="ouija" class="item-pelicula"><img src="img/peliculas/terror/terror1.jpg"></a>
+        <a href="detallePelicula.html" id="virus 32" class="item-pelicula"><img
+            src="img/peliculas/terror/terror2.jpg"></a>
+        <a href="detallePelicula.html" id="al tercer dia" class="item-pelicula"><img
+            src="img/peliculas/terror/terror3.jpg"></a>
+        <a href="detallePelicula.html" id="paranormal activity" class="item-pelicula"><img
+            src="img/peliculas/terror/terror4.jpg"></a>
+        <a href="detallePelicula.html" id="the deep house" class="item-pelicula"><img
+            src="img/peliculas/terror/terror5.jpg"></a>
+        <a href="detallePelicula.html" id="actividadParanormal" class="item-pelicula"><img
+            src="img/peliculas/terror/terror6.jpg"></a>
+      </article>
+    </section>
 
-  <section id="seccionEpoca" class="seccion-peliculas">
-    <h2>Series de epoca</h2>
-    <article class="contenedor-pelicula">
-      <a href="detalleSerie.html" class="item-pelicula"><img src="img/series/epoca/epoca1.jpg"></a>
-      <a href="detalleSerie.html" class="item-pelicula"><img src="img/series/epoca/epoca2.jpg"></a>
-      <a href="detalleSerie.html" class="item-pelicula"><img src="img/series/epoca/epoca3.jpg"></a>
-      <a href="detalleSerie.html" class="item-pelicula"><img src="img/series/epoca/epoca4.jpg"></a>
-      <a href="detalleSerie.html" class="item-pelicula"><img src="img/series/epoca/epoca5.jpg"></a>
-      <a href="detalleSerie.html" class="item-pelicula"><img src="img/series/epoca/epoca6.jpg"></a>
-    </article>
-  </section>
+    <section id="seccionEpoca" class="seccion-peliculas">
+      <h2>Series de epoca</h2>
+      <article class="contenedor-pelicula">
+        <a href="detalleSerie.html" class="item-pelicula"><img src="img/series/epoca/epoca1.jpg"></a>
+        <a href="detalleSerie.html" class="item-pelicula"><img src="img/series/epoca/epoca2.jpg"></a>
+        <a href="detalleSerie.html" class="item-pelicula"><img src="img/series/epoca/epoca3.jpg"></a>
+        <a href="detalleSerie.html" class="item-pelicula"><img src="img/series/epoca/epoca4.jpg"></a>
+        <a href="detalleSerie.html" class="item-pelicula"><img src="img/series/epoca/epoca5.jpg"></a>
+        <a href="detalleSerie.html" class="item-pelicula"><img src="img/series/epoca/epoca6.jpg"></a>
+      </article>
+    </section>
 
-  <section id="seccionAnimadas" class="seccion-peliculas">
-    <h2>Peliculas animadas</h2>
-    <article class="contenedor-pelicula">
-      <a href="detallePelicula.html" class="item-pelicula"><img src="img/peliculas/animadas/animada1.jpg"></a>
-      <a href="detallePelicula.html" class="item-pelicula"><img src="img/peliculas/animadas/animada2.jpg"></a>
-      <a href="detallePelicula.html" class="item-pelicula"><img src="img/peliculas/animadas/animada3.jpg"></a>
-      <a href="detallePelicula.html" class="item-pelicula"><img src="img/peliculas/animadas/animada4.jpg"></a>
-      <a href="detallePelicula.html" class="item-pelicula"><img src="img/peliculas/animadas/animada5.jpg"></a>
-      <a href="detallePelicula.html" class="item-pelicula"><img src="img/peliculas/animadas/animada6.jpg"></a>
-    </article>
-  </section>
-  <section id="seccionFantasia" class="seccion-peliculas">
-    <h2>Series de fantasia</h2>
-    <article class="contenedor-pelicula">
-      <a href="detalleSerie.html" class="item-pelicula"><img src="img/series/fantasia/fantasia1.jpg"></a>
-      <a href="detalleSerie.html" class="item-pelicula"><img src="img/series/fantasia/fantasia2.jpg"></a>
-      <a href="detalleSerie.html" class="item-pelicula"><img src="img/series/fantasia/fantasia3.jpg"></a>
-      <a href="detalleSerie.html" class="item-pelicula"><img src="img/series/fantasia/fantasia4.jpg"></a>
-      <a href="detalleSerie.html" class="item-pelicula"><img src="img/series/fantasia/fantasia5.jpg"></a>
-      <a href="detalleSerie.html" class="item-pelicula"><img src="img/series/fantasia/fantasia6.jpg"></a>
-    </article>
-  </section>
+    <section id="seccionAnimadas" class="seccion-peliculas">
+      <h2>Peliculas animadas</h2>
+      <article class="contenedor-pelicula">
+        <a href="detallePelicula.html" class="item-pelicula"><img src="img/peliculas/animadas/animada1.jpg"></a>
+        <a href="detallePelicula.html" class="item-pelicula"><img src="img/peliculas/animadas/animada2.jpg"></a>
+        <a href="detallePelicula.html" class="item-pelicula"><img src="img/peliculas/animadas/animada3.jpg"></a>
+        <a href="detallePelicula.html" class="item-pelicula"><img src="img/peliculas/animadas/animada4.jpg"></a>
+        <a href="detallePelicula.html" class="item-pelicula"><img src="img/peliculas/animadas/animada5.jpg"></a>
+        <a href="detallePelicula.html" class="item-pelicula"><img src="img/peliculas/animadas/animada6.jpg"></a>
+      </article>
+    </section>
+    <section id="seccionFantasia" class="seccion-peliculas">
+      <h2>Series de fantasia</h2>
+      <article class="contenedor-pelicula">
+        <a href="detalleSerie.html" class="item-pelicula"><img src="img/series/fantasia/fantasia1.jpg"></a>
+        <a href="detalleSerie.html" class="item-pelicula"><img src="img/series/fantasia/fantasia2.jpg"></a>
+        <a href="detalleSerie.html" class="item-pelicula"><img src="img/series/fantasia/fantasia3.jpg"></a>
+        <a href="detalleSerie.html" class="item-pelicula"><img src="img/series/fantasia/fantasia4.jpg"></a>
+        <a href="detalleSerie.html" class="item-pelicula"><img src="img/series/fantasia/fantasia5.jpg"></a>
+        <a href="detalleSerie.html" class="item-pelicula"><img src="img/series/fantasia/fantasia6.jpg"></a>
+      </article>
+    </section>
+    <section id="seccionSuspenso" class="seccion-peliculas">
+      <h2>Peliculas de suspenso</h2>
+      <article class="contenedor-pelicula">
+        <a href="detallePelicula.html" class="item-pelicula"><img src="img/peliculas/suspenso/suspenso1.jpg"></a>
+        <a href="detallePelicula.html" class="item-pelicula"><img src="img/peliculas/suspenso/suspenso2.jpg"></a>
+        <a href="detallePelicula.html" class="item-pelicula"><img src="img/peliculas/suspenso/suspenso3.jpg"></a>
+        <a href="detallePelicula.html" class="item-pelicula"><img src="img/peliculas/suspenso/suspenso4.jpg"></a>
+        <a href="detallePelicula.html" class="item-pelicula"><img src="img/peliculas/suspenso/suspenso5.jpg"></a>
+        <a href="detallePelicula.html" class="item-pelicula"><img src="img/peliculas/suspenso/suspenso6.jpg"></a>
+      </article>
+    </section>
+    <section id="seccionArgentinas" class="seccion-peliculas">
+      <h2>Series argentinas</h2>
+      <article class="contenedor-pelicula">
+        <a href="detalleSerie.html" class="item-pelicula"><img src="img/series/argentinas/argentina1.jpg"></a>
+        <a href="detalleSerie.html" class="item-pelicula"><img src="img/series/argentinas/argentina2.jpg"></a>
+        <a href="detalleSerie.html" class="item-pelicula"><img src="img/series/argentinas/argentina3.jpg"></a>
+        <a href="detalleSerie.html" class="item-pelicula"><img src="img/series/argentinas/argentina4.jpg"></a>
+        <a href="detalleSerie.html" class="item-pelicula"><img src="img/series/argentinas/argentina5.jpg"></a>
+        <a href="detalleSerie.html" class="item-pelicula"><img src="img/series/argentinas/argentina6.jpg"></a>
+      </article>
+    </section>
+    <section id="seccionAccion" class="seccion-peliculas">
+      <h2>Peliculas de acción</h2>
+      <article class="contenedor-pelicula">
+        <a href="detallePelicula.html" class="item-pelicula"><img src="img/peliculas/accion/accion01.jpg"></a>
+        <a href="detallePelicula.html" class="item-pelicula"><img src="img/peliculas/accion/accion02.jpg"></a>
+        <a href="detallePelicula.html" class="item-pelicula"><img src="img/peliculas/accion/accion03.jpg"></a>
+        <a href="detallePelicula.html" class="item-pelicula"><img src="img/peliculas/accion/accion04.jpg"></a>
+        <a href="detallePelicula.html" class="item-pelicula"><img src="img/peliculas/accion/accion05.jpg"></a>
+        <a href="detallePelicula.html" class="item-pelicula"><img src="img/peliculas/accion/accion06.jpg"></a>
+      </article>
+    </section>
+    <section id="seccionCrimen" class="seccion-peliculas">
+      <h2>Series de Crimen</h2>
+      <article class="contenedor-pelicula">
+        <a href="detalleSerie.html" class="item-pelicula"><img src="img/series/crimen/crimen1.jpg"></a>
+        <a href="detalleSerie.html" class="item-pelicula"><img src="img/series/crimen/crimen2.jpg"></a>
+        <a href="detalleSerie.html" class="item-pelicula"><img src="img/series/crimen/crimen3.jpg"></a>
+        <a href="detalleSerie.html" class="item-pelicula"><img src="img/series/crimen/crimen4.jpg"></a>
+        <a href="detalleSerie.html" class="item-pelicula"><img src="img/series/crimen/crimen5.jpg"></a>
+        <a href="detalleSerie.html" class="item-pelicula"><img src="img/series/crimen/crimen6.jpg"></a>
+      </article>
+    </section>
+  </main>
   <script src=js/home.js></script>
   <script src="js/menu.js"></script>
   <script src=js/localStorage.js></script>
   <script src=js/validaciones.js></script>
+  <script src=js/catalogo.js></script>
 </body>
 
 </html>
