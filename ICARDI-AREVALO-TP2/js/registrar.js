@@ -154,6 +154,10 @@ $('input[name="tipoPago"]').change(function () {
         $('#codigoTarjetaError').text('\xA0');
         $('#cuponError').text('\xA0');    
 });
+$("#btnCancelar").click(function(){
+    window.location = "index.html";
+})
+
 
 $("#FormRegistrar").change(function () {
     if (nombreValido && apellidoValido && emaiValido && usuarioValido && passValido && passConfirmarValido && medioPagoValido) {

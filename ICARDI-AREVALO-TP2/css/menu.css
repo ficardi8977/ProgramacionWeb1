@@ -5,6 +5,7 @@
 body{
     font-family: 'Open Sans', sans-serif;
     background-color: black;
+    margin: 1em;
 
 }
 h1 {
@@ -104,8 +105,7 @@ h2{
     background-color: #4CAF50;
     border: none;
     color: white;
-    padding-right: 5.5em;
-    padding-left: 5.5em;
+    width: 90%;
     padding-top: 1em;
     padding-bottom: 1em;
     text-align: center;
@@ -118,8 +118,7 @@ h2{
     background-color: #e05b5b;
     border: none;
     color: white;
-    padding-right: 5.5em;
-    padding-left: 5.5em;
+    width: 90%;
     padding-top: 1em;
     padding-bottom: 1em;
     text-align: center;
@@ -180,7 +179,7 @@ label{
     .menu ul{
         display: flex;
         justify-content: center;
-        padding-top: 0em;
+        padding-top: 1em;
     }
 
     .desplegable{
@@ -227,7 +226,7 @@ label{
     }
 
     .item-pelicula {
-        width: calc(12% + 1em);
+        width: calc(14.4% + 0.2em);
     }
     .item-pelicula:hover {
         transform: scale(1.02, 1.02)

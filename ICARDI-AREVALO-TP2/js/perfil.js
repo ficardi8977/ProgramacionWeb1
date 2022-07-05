@@ -77,6 +77,9 @@ $("#formPerfil").change(function () {
         $('#btnRegistrar').prop('disabled', true);
     }
 });
+$("#btnCancelar").click(function(){
+    window.location = "home.html";
+})
 
 $("#formPerfil").submit(function () {
     let tarjeta = false;

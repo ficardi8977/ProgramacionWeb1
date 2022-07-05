@@ -7,10 +7,14 @@ h2{
 }
 h3{
     color: white;
-    text-align: left;
+    text-align: center;
 }
 p{
     color: white;
+}
+body{
+    margin-left: 1em;
+    margin-right: 1em;    
 }
 .contenedor-form-perfil{
     padding-top: 5em;
@@ -165,6 +169,15 @@ label{
 }
 /* resolucion diferente a mobile*/
 @media screen and (min-width:48em){
+    h3{
+        text-align: center;
+    }
+    body{
+        margin-left: 2em;
+        margin-right: 2em;    
+    }
+}
+@media screen and (min-width:72em){
     .seccion-datos-formulario{
         flex-direction: row;
     } 

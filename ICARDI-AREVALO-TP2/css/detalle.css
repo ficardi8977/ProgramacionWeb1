@@ -17,11 +17,15 @@ label{
     flex-direction: column;
     gap: 2em;
 }
+.trailer-contenido{
+    width: calc(80% + 1em);
+}
 .info-contenido{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     gap: 2em;
+    padding-right: 1em;
     align-items: center;
 }
 iframe{
@@ -41,6 +45,10 @@ iframe{
     font-size: 1em;
     cursor: pointer;
 }
+.recomendadas{
+    width: 10em;
+    height: 10em;
+}
 .btn-comenzar:hover {
     background-color: #83bb85;
 }
@@ -59,8 +67,23 @@ iframe{
   font-size: 14px;
   line-height: 18px;
 }
-
+.contenedor{
+    width: 80%;
+    margin:auto;
+    display: flex;
+    flex-direction: column;
+    gap:1em;
+}
 @media screen and (min-width:48em){
+    .info-contenido{
+        width: calc(80% + 1em);
+    }
+    .trailer-contenido{
+        width: calc(80% + 1em);
+    }
+}
+
+@media screen and (min-width:72em){
     .seccion-pelicula{
         flex-direction: row;
     }

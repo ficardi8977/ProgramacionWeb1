@@ -15,6 +15,7 @@ h1{
 }
 h2{
     color: white;
+    text-align: center;
 }
 p{
     color: white;
@@ -201,6 +202,9 @@ p{
 }
 /* resolucion diferente a mobile*/
 @media screen and (min-width:48em){
+    h2{
+        text-align: left;
+    }
     .banner
     {
         width: 100%;;

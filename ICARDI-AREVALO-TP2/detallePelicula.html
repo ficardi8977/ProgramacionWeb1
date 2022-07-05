@@ -8,9 +8,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/detalle.css">
+    <link rel="stylesheet" href="css/nivo-slider.css">
+    <link rel="stylesheet" href="css/default.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/menu.js"></script>
     <title>Unflix</title>
 </head>
 
@@ -45,7 +48,7 @@
                     robar esos 120 millones, pero el departamento del Sheriff de Los Ángeles, la brigada más temida de
                     la ciudad liderada por 'El gran Nick' (Gerard Butler), no está dispuesto a ponérselo fácil.</li>
             </ul>
-            <input id ="btnComenzar" type="submit" class="btn-comenzar" value="Comenzar">
+            <input id ="btnComenzarPelicula" type="btton" class="btn-comenzar" value="Comenzar">
         </article>
         <article class="trailer-contenido">
             <iframe src="https://www.youtube.com/embed/KdBDHxaHyvE?start=8"
@@ -54,34 +57,20 @@
                 allowfullscreen></iframe>
         </article>
     </section>
-    <section id="seccionEpoca" class="seccion-peliculas">
-        <h2>Sugerencias</h2>
-        <article class="contenedor-pelicula">
-          <a href="detalleSerie.html" class="item-pelicula"><img src="img/series/epoca/epoca1.jpg"></a>
-          <a href="detalleSerie.html" class="item-pelicula"><img src="img/series/epoca/epoca3.jpg"></a>
-          <a href="detalleSerie.html" class="item-pelicula"><img src="img/series/epoca/epoca4.jpg"></a>
-          <a href="detalleSerie.html" class="item-pelicula"><img src="img/series/epoca/epoca6.jpg"></a>
-        </article>
-      </section>
-      <section id ="carousel" class="flexslider">
-        <ul class="slides">
-          <li>
-            <img src="img/series/epoca/epoca1.jpg"></a>
-          </li>
-          <li>
-            <img src="img/series/epoca/epoca2.jpg"  style="height:10em;width: 20em;">            
-          </li>
-          <li>
-            <img src="img/series/epoca/epoca4.jpg" style="height:10em;width: 20em;">              
-          </li>
-          <li>
-            <img src="img/series/epoca/epoca5.jpg" style="height:10em;width: 20em;">              
-          </li>
-        </ul>
-      </section>
+    <section class="contenedor">
+      <h1>Similares</h1>
+      <article class="slider-wrapper theme-default">
+          <div id="sliderHome" class="nivoSlider"> 
+              <a href="detalleSerie.html"><img  src="img/recomendados/mandalorian.jpg" alt="El marginal" title="Star Wars the mandalorian" /></a>
+              <a href="detalleSerie.html"><img  src="img/recomendados/peakyBlinders.jpg" alt="Peaky Blinders" title="Peaky blinders" /></a>
+              <a href="detalleSerie.html"><img  src="img/recomendados/theWalkingDead.jpg" alt="the walking dead" title="The walking dead" /></a>  
+              <a href="detallePelicula.html"><img  src="img/recomendados/losIncreibles.jpg" alt="Los Increibles" title="Los increibles" /></a>
+              <a href="detallePelicula.html"><img  src="img/recomendados/juego-de-ladrones.jpg" alt="Los Increibles" title="Juego de ladrones" />  </a>
+  
+            </div>
+      </article>
+  </section>
+  <script src="js/jquery.nivo.slider.js"></script> 
+  <script src="js/detalles.js"></script>
 </body>
-<script src="js/jquery.min.js"></script>
-<script src="js/jquery.flexslider-min.js"></script>
-<script src="js/menu.js"></script>
-<script src="js/detalles.js"></script>
 </html>
