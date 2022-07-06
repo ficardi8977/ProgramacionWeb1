@@ -130,6 +130,7 @@ $('input[name="tipoPago"]').change(function () {
             medioPagoValido = true;
         }
     }else{
+        medioPagoValido = false;
         $('#pagoFacil').prop('checked', false);
         $('#rapiPago').prop('checked', false);
         $('#pagoFacil').prop('disabled', true);

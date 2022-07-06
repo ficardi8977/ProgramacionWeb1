@@ -8,8 +8,8 @@ a{
 body{
     font-family: 'Open Sans', sans-serif;
     background-color: black;
-
 }
+
 h2{
     color: white;
     text-align: center;
@@ -172,5 +172,8 @@ h2{
     }
     .btn-cancelar {
         width: calc(50%);
+    }
+    body{
+        margin: 0.5em;
     }
 }
