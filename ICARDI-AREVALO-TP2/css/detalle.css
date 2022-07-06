@@ -20,6 +20,7 @@ label{
 .trailer-contenido{
     width: calc(80% + 1em);
 }
+
 .info-contenido{
     display: flex;
     flex-direction: column;
@@ -45,13 +46,19 @@ iframe{
     font-size: 1em;
     cursor: pointer;
 }
+.btn-comenzar:hover:enabled {
+    background-color: #83bb85;
+}
+
+.btn-comenzar:disabled {
+    background-color: #5e5e5e;
+    cursor: not-allowed
+}
 .recomendadas{
     width: 10em;
     height: 10em;
 }
-.btn-comenzar:hover {
-    background-color: #83bb85;
-}
+
 .contenedor-capitulos{
     display: flex;
     flex-direction: column;

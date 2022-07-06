@@ -3,8 +3,12 @@
 
   $("#selectorTemporada").change(function(){
 
-    debugger;
     $("#selectorCapitulo").empty();
+    if(this.value != 0 ){
+      $("#btnComenzarSerie").prop("disabled",false)
+    }else{
+      $("#btnComenzarSerie").prop("disabled",true)
+    }
     switch (this.value){
     case "1" :
       for (i=0;i<=capitulos.length-1;i++) { 
@@ -20,13 +24,17 @@
       for (i=0;i<=capitulos.length-1;i++) { 
         agregarCapitulos("3", i);
       }
-    break;   
+    break;
+    case "0" :     
+        agregarCapituloDefault();
+      break;   
     }
   });
 
   $("#btnComenzarSerie").click(function(){
       let temporada = $("#selectorTemporada").val();
       let capitulo = $("#selectorCapitulo").val();
+
       capitulos.forEach(element => {
         if(temporada == element.temporada && capitulo == element.capitulo){
           window.open(element.url);
@@ -52,3 +60,14 @@
     capitulo.appendChild(option);
   }
 }
+
+  function agregarCapituloDefault(){
+      let capitulo = document.querySelector("#selectorCapitulo");
+      const option = document.createElement("option");
+      option.id = "default";
+      option.value= "0";
+      option.text = "-Seleccionar capitulo-";
+      const a = document.createElement("a");
+      option.appendChild(a);
+      capitulo.appendChild(option);
+    }
